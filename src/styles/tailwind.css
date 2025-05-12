@@ -2,8 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    /* p{
-        @apply text-body;
-    } */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: "EB Garamond";
+    font-weight: regular;
+  }
+
+  h1 {
+    @apply text-largeMobile md:text-largeDesk text-brun-800 md:pb-xxs;
+  }
+  h2 {
+    @apply text-mediumLargeMobile font-bold md:text-mediumLargeDesk text-brun-700 md:pb-xxs;
+  }
+  h3 {
+    @apply text-mediumMobile font-extrabold  md:text-mediumDesk text-brun-800 md:pb-xxs;
+  }
+  h4 {
+    @apply text-smallMediumMobile md:text-smallMediumDesk text-brun-900 md:pb-xxs;
+  }
+  h5 {
+    @apply text-smallMobile md:text-smallDesk text-brun-950 md:pb-xxs;
+  }
+  h6,
+  summary,
+  span {
+    @apply text-baseMobile md:text-baseDesk text-brun-700;
+  }
+  p {
+    @apply text-bodyMobile md:text-bodyDesk  text-brun-950;
+  }
+}
+
+@media (min-width: 769px) {
+  /* General classnames */
+  .pc-only {
+    display: block;
+  }
+
+  .pc-hide {
+    display: none;
+  }
 }

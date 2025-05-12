@@ -90,8 +90,8 @@ export default {
       mediumLargeDesk: ["4.7rem", { lineHeight: "7rem" }],
       largeDesk: ["6.3rem", { lineHeight: "9.45rem" }],
 
-      konsultativDesk: ["0.8rem", { lineHeight: "1.2rem" }],
-      bodyDesk: ["1rem", { lineHeight: "1.5rem" }],
+      konsultativMobile: ["0.8rem", { lineHeight: "1.2rem" }],
+      bodyMobile: ["1rem", { lineHeight: "1.5rem" }],
       baseMobile: ["1.2rem", { lineHeight: "1.8rem" }],
       smallMobile: ["1.4rem", { lineHeight: "2.1rem" }],
       smallMediumMobile: ["1.7rem", { lineHeight: "2.5rem" }],
@@ -102,9 +102,13 @@ export default {
   },
 
   /* Tilføj dit fontvægt-hierarki nedenfor */
-  //   fontWeight: {
-  //     regular: '400',
-  //   },
+  fontWeight: {
+    light: "300",
+    regular: "400",
+    semibold: "500",
+    bold: "600",
+    extrabold: "700",
+  },
 
   /* Borders - borderstørrelser herunder */
   borderWidth: {
