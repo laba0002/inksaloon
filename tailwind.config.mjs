@@ -80,42 +80,58 @@ export default {
     },
 
     /* Tilføj dit typografiske hierarki herunder */
-    // fontSize: {
-    //     base: ['1rem', { lineHeight: '1.5rem' }],
-    //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-    //   },
+    fontSize: {
+      konsultativDesk: ["0.8rem", { lineHeight: "1.2rem" }],
+      bodyDesk: ["1.125rem", { lineHeight: "1.7rem" }],
+      baseDesk: ["1.5rem", { lineHeight: "2.25rem" }],
+      smallDesk: ["2rem", { lineHeight: "3rem" }],
+      smallMediumDesk: ["2.45rem", { lineHeight: "3.7rem" }],
+      mediumDesk: ["3.5rem", { lineHeight: "5.25rem" }],
+      mediumLargeDesk: ["4.7rem", { lineHeight: "7rem" }],
+      largeDesk: ["6.3rem", { lineHeight: "9.45rem" }],
 
-    /* Tilføj dit fontvægt-hierarki nedenfor */
-    //   fontWeight: {
-    //     regular: '400',
-    //   },
-
-    /* Borders - borderstørrelser herunder */
-    borderWidth: {
-      0: "0px",
-      DEFAULT: "1px",
-      2: "2px",
-      3: "3px",
-      4: "4px",
-    },
-
-    /* Box shadows herunder */
-    boxShadow: {
-      boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 16px -162px 45px 0px rgba(113, 100, 71, 0.00), 11px -103px 42px 0px rgba(113, 100, 71, 0.01), 6px -58px 35px 0px rgba(113, 100, 71, 0.05), 3px -26px 26px 0px rgba(113, 100, 71, 0.09), 1px -6px 14px 0px rgba(113, 100, 71, 0.10)",
-      filterShadow: " 0px -278px 78px 0px rgba(119, 106, 99, 0.00), 0px -178px 71px 0px rgba(119, 106, 99, 0.01), 0px -100px 60px 0px rgba(119, 106, 99, 0.05), 0px -45px 45px 0px rgba(119, 106, 99, 0.09), 0px -11px 24px 0px rgba(119, 106, 99, 0.10)",
-    },
-
-    extend: {
-      /* Border radius størrelser herunder */
-      borderRadius: {
-        none: "0px",
-        xs: "10px",
-        s: "40px",
-        m: "60px",
-        lg: "70px",
-        xl: "80px",
-      },
+      konsultativDesk: ["0.8rem", { lineHeight: "1.2rem" }],
+      bodyDesk: ["1rem", { lineHeight: "1.5rem" }],
+      baseMobile: ["1.2rem", { lineHeight: "1.8rem" }],
+      smallMobile: ["1.4rem", { lineHeight: "2.1rem" }],
+      smallMediumMobile: ["1.7rem", { lineHeight: "2.5rem" }],
+      mediumMobile: ["2rem", { lineHeight: "3rem" }],
+      mediumLargeMobile: ["2.5rem", { lineHeight: "3.75rem" }],
+      largeMobile: ["3rem", { lineHeight: "4,5rem" }],
     },
   },
+
+  /* Tilføj dit fontvægt-hierarki nedenfor */
+  //   fontWeight: {
+  //     regular: '400',
+  //   },
+
+  /* Borders - borderstørrelser herunder */
+  borderWidth: {
+    0: "0px",
+    DEFAULT: "1px",
+    2: "2px",
+    3: "3px",
+    4: "4px",
+  },
+
+  /* Box shadows herunder */
+  boxShadow: {
+    boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 16px -162px 45px 0px rgba(113, 100, 71, 0.00), 11px -103px 42px 0px rgba(113, 100, 71, 0.01), 6px -58px 35px 0px rgba(113, 100, 71, 0.05), 3px -26px 26px 0px rgba(113, 100, 71, 0.09), 1px -6px 14px 0px rgba(113, 100, 71, 0.10)",
+    filterShadow: " 0px -278px 78px 0px rgba(119, 106, 99, 0.00), 0px -178px 71px 0px rgba(119, 106, 99, 0.01), 0px -100px 60px 0px rgba(119, 106, 99, 0.05), 0px -45px 45px 0px rgba(119, 106, 99, 0.09), 0px -11px 24px 0px rgba(119, 106, 99, 0.10)",
+  },
+
+  extend: {
+    /* Border radius størrelser herunder */
+    borderRadius: {
+      none: "0px",
+      xs: "10px",
+      s: "40px",
+      m: "60px",
+      lg: "70px",
+      xl: "80px",
+    },
+  },
+
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 };
