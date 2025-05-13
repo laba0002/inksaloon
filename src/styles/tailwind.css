@@ -18,10 +18,10 @@
     @apply text-largeMobile md:text-largeDesk text-brun-800 md:pb-xxs;
   }
   h2 {
-    @apply text-mediumLargeMobile font-bold md:text-mediumLargeDesk text-brun-700 md:pb-xxs;
+    @apply text-mediumLargeMobile  md:text-mediumLargeDesk text-brun-700 md:pb-xxs;
   }
   h3 {
-    @apply text-mediumMobile font-extrabold  md:text-mediumDesk text-brun-800 md:pb-xxs;
+    @apply text-mediumMobile   md:text-mediumDesk text-brun-800 md:pb-xxs;
   }
   h4 {
     @apply text-smallMediumMobile md:text-smallMediumDesk text-brun-900 md:pb-xxs;
