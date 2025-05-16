@@ -114,31 +114,50 @@ const images = imageList.map((img) => img.src);
   
 
 <script define:vars={{ images }}>
-  const positions = ["left-far", "left", "center", "right", "right-far"];
-  let indexes = [0, 1, 2, 3, 4];
+  document.addEventListener('DOMContentLoaded', () => {
+    const positions = ["left-far", "left", "center", "right", "right-far"];
+    let indexes = [0, 1, 2, 3, 4];
+    const container = document.getElementById("cardContainer");
 
-  const container = document.getElementById("cardContainer");
+    function render() {
+      if (!container) {
+        console.error('Card container not found');
+        return;
+      }
 
-  function render() {
-    container.innerHTML = "";
-    indexes.forEach((imgIdx, posIdx) => {
-      const img = document.createElement("img");
-      img.src = images[imgIdx];
-      img.className = `carousel-card ${positions[posIdx]}`;
-      container.appendChild(img);
-    });
-  }
+      container.innerHTML = "";
+      indexes.forEach((imgIdx, posIdx) => {
+        const img = document.createElement("img");
+        img.src = images[imgIdx];
+        img.className = `carousel-card ${positions[posIdx]}`;
+        img.loading = "eager"; // Force immediate loading
+        img.onerror = () => {
+          console.error(`Failed to load image at index ${imgIdx}`);
+          img.src = 'fallback-image-url'; // You might want to add a fallback image
+        };
+        container.appendChild(img);
+      });
+    }
 
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    indexes.unshift(indexes.pop()); // rotate left
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        indexes.unshift(indexes.pop()); // rotate left
+        render();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        indexes.push(indexes.shift()); // rotate right
+        render();
+      });
+    }
+
+    // Initial render
     render();
   });
-
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    indexes.push(indexes.shift()); // rotate right
-    render();
-  });
-
-  render();
 </script>
 
