@@ -1,0 +1,72 @@
+---
+import { apiDetails } from "../settings";
+import ProductListCard from "../components/ProductListCard.astro";
+
+// Get alle mulige slug-sider
+export async function getStaticPaths() {
+  const res = await fetch(`${apiDetails.supabaseUrl}/overkategorier?select=slug`, {
+    headers: {
+      apikey: apiDetails.supabaseAnonKey,
+    },
+  });
+
+  const kategorier = await res.json();
+
+  return {
+    paths: kategorier.map((kat) => ({
+      params: { slug: kat.slug },
+    })),
+    fallback: false,
+  };
+}
+
+// Hent data til den aktuelle slug-side
+export async function get({ params }) {
+  const slug = params.slug;
+
+  // Hent kategoriinfo
+  const katRes = await fetch(
+    `${apiDetails.supabaseUrl}/overkategorier?slug=eq.${slug}&select=id,navn`,
+    {
+      headers: {
+        apikey: apiDetails.supabaseAnonKey,
+      },
+    }
+  );
+
+  const [kategori] = await katRes.json();
+
+  // Hent produkter til den kategori
+  const prodRes = await fetch(
+    `${apiDetails.supabaseUrl}/produkter?overkategori_id=eq.${kategori.id}&select=*`,
+    {
+      headers: {
+        apikey: apiDetails.supabaseAnonKey,
+      },
+    }
+  );
+
+  const produkter = await prodRes.json();
+
+  return {
+    props: {
+      kategori,
+      produkter,
+    },
+  };
+}
+---
+
+<h1>{kategori.navn}</h1>
+
+<ul>
+  {produkter.length > 0 ? (
+    produkter.map((produkt) => (
+      <li>
+        <ProductListCard produkt={produkt} />
+      </li>
+    ))
+  ) : (
+    <p>Ingen produkter i denne kategori.</p>
+  )}
+</ul>

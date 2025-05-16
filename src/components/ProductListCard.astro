@@ -1,0 +1,11 @@
+---
+---
+// components/ProductListCard.astro
+const { produkt } = Astro.props;
+---
+
+<article class="border p-4 rounded">
+  <a href={`/produkt/${produkt.id}`}>
+    <h2>{produkt.navn}</h2>
+  </a>
+</article>

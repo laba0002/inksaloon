@@ -1,0 +1,45 @@
+---
+import { apiDetails } from "../../settings";
+
+// Step 1: Generer alle mulige id'er til produktsider
+export async function getStaticPaths() {
+  const res = await fetch(`${apiDetails.supabaseUrl}/produkter?select=id`, {
+    headers: {
+      apikey: apiDetails.supabaseAnonKey,
+    },
+  });
+
+  const produkter = await res.json();
+
+  return {
+    paths: produkter.map((produkt) => ({
+      params: { id: produkt.id.toString() },
+    })),
+    fallback: false, // Kræves ved static builds
+  };
+}
+
+// Step 2: Hent data til en specifik produktside
+export async function get({ params }) {
+  const { id } = params;
+
+  const res = await fetch(`${apiDetails.supabaseUrl}/produkter?id=eq.${id}&select=*`, {
+    headers: {
+      apikey: apiDetails.supabaseAnonKey,
+    },
+  });
+
+  const [produkt] = await res.json();
+
+  return {
+    props: {
+      produkt,
+    },
+  };
+}
+---
+
+<!-- HTML/Visning -->
+<h1>{produkt.navn}</h1>
+<p>{produkt.beskrivelse}</p>
+<!-- Du kan tilføje billede, pris, osv. -->
