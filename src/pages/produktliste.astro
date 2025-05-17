@@ -1,0 +1,27 @@
+---
+//ts-nocheck
+import MainLayout from "../layouts/MainLayout.astro";
+import { apiDetails } from "../settings";
+import ProductCard from "../components/ProductCard.astro"; 
+
+
+const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
+  headers: {
+    apikey: apiDetails.supabaseAnonKey,
+    Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
+  },
+});
+const data = await res.json();
+console.log("Supabase URL:", apiDetails.supabaseUrl);
+console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
+
+---
+
+<MainLayout>
+<h1>produkter</h1>
+
+
+
+{data.map((product) => <ProductCard {product} /> )}
+
+</MainLayout>
