@@ -1,0 +1,27 @@
+---
+const { menuData } = Astro.props;
+---
+
+<nav class="mega-menu">
+  <ul>
+    {menuData.map((overkat) => (
+      <li class="overkategori" key={overkat.id}>
+        <button class="toggle">{overkat.name}</button>
+        <div class="dropdown">
+          <ul>
+            {overkat.underkategorier?.map((underkat) => (
+              <li key={underkat.id}>
+                <strong>{underkat.name}</strong>
+                <ul>
+                  {underkat.menupunkter?.map((punkt) => (
+                    <li key={punkt.id}>{punkt.name}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </li>
+    ))}
+  </ul>
+</nav>

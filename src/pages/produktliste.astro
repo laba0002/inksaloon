@@ -5,6 +5,7 @@ import { apiDetails } from "../settings";
 import ProductCard from "../components/ProductCard.astro"; 
 
 
+
 const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
   headers: {
     apikey: apiDetails.supabaseAnonKey,
@@ -18,6 +19,7 @@ console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
 ---
 
 <MainLayout>
+
 <h1>produkter</h1>
 
 
