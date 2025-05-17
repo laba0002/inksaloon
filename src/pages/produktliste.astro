@@ -1,6 +1,6 @@
 ---
 //ts-nocheck
-import MainLayout from "../layouts/MainLayout.astro";
+import ListeLayout from "../layouts/MainLayout.astro";
 import { apiDetails } from "../settings";
 import ProductCard from "../components/ProductCard.astro"; 
 
@@ -17,11 +17,10 @@ console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
 
 ---
 
-<MainLayout>
-<h1>produkter</h1>
+<ListeLayout title="Bryllup">
+<h1>Bryllup</h1>
 
 
 
-{data.map((product) => <ProductCard {product} /> )}
-
-</MainLayout>
+<div class="flex flex-wrap gap-sm">{data.map((product) => <ProductCard {product} /> )}</div>
+</ListeLayout>
