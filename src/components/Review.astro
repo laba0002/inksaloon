@@ -1,0 +1,66 @@
+---
+// Props
+const { text = "Fantastisk service og hurtig levering. Kan varmt anbefales!", name = "Mette J." } = Astro.props;
+---
+
+<div class="w-[280px] h-[230px] bg-[url('/papir.jpg')] bg-cover rounded-lg shadow relative flex flex-col justify-between">
+  <!-- Stjerner -->
+  <div class="flex justify-center space-x-[2px] pt-s">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+      <g clip-path="url(#clip0_803_1371)">
+        <path d="M12.5843 11.4303L14.086 16.0534L9.0028 12.3587L12.5843 11.4303ZM17.2286 6.38343H10.9441L9.00348 0.40332L7.05606 6.38481L0.771484 6.37658L5.86086 10.0774L3.91343 16.0527L9.0028 12.3587L12.1454 10.0774L17.2286 6.38343Z" fill="#5B4C48"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_803_1371">
+          <rect width="16.4571" height="16.4571" fill="white" transform="translate(0.771484)"></rect>
+        </clipPath>
+      </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+      <g clip-path="url(#clip0_803_1371)">
+        <path d="M12.5843 11.4303L14.086 16.0534L9.0028 12.3587L12.5843 11.4303ZM17.2286 6.38343H10.9441L9.00348 0.40332L7.05606 6.38481L0.771484 6.37658L5.86086 10.0774L3.91343 16.0527L9.0028 12.3587L12.1454 10.0774L17.2286 6.38343Z" fill="#5B4C48"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_803_1371">
+          <rect width="16.4571" height="16.4571" fill="white" transform="translate(0.771484)"></rect>
+        </clipPath>
+      </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+      <g clip-path="url(#clip0_803_1371)">
+        <path d="M12.5843 11.4303L14.086 16.0534L9.0028 12.3587L12.5843 11.4303ZM17.2286 6.38343H10.9441L9.00348 0.40332L7.05606 6.38481L0.771484 6.37658L5.86086 10.0774L3.91343 16.0527L9.0028 12.3587L12.1454 10.0774L17.2286 6.38343Z" fill="#5B4C48"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_803_1371">
+          <rect width="16.4571" height="16.4571" fill="white" transform="translate(0.771484)"></rect>
+        </clipPath>
+      </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+      <g clip-path="url(#clip0_803_1371)">
+        <path d="M12.5843 11.4303L14.086 16.0534L9.0028 12.3587L12.5843 11.4303ZM17.2286 6.38343H10.9441L9.00348 0.40332L7.05606 6.38481L0.771484 6.37658L5.86086 10.0774L3.91343 16.0527L9.0028 12.3587L12.1454 10.0774L17.2286 6.38343Z" fill="#5B4C48"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_803_1371">
+          <rect width="16.4571" height="16.4571" fill="white" transform="translate(0.771484)"></rect>
+        </clipPath>
+      </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+      <g clip-path="url(#clip0_803_1371)">
+        <path d="M12.5843 11.4303L14.086 16.0534L9.0028 12.3587L12.5843 11.4303ZM17.2286 6.38343H10.9441L9.00348 0.40332L7.05606 6.38481L0.771484 6.37658L5.86086 10.0774L3.91343 16.0527L9.0028 12.3587L12.1454 10.0774L17.2286 6.38343Z" fill="#5B4C48"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_803_1371">
+          <rect width="16.4571" height="16.4571" fill="white" transform="translate(0.771484)"></rect>
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Anmeldelsestekst -->
+  <div class="absolute top-none text-konsultativDesk text-brun-900 px-s pt-lg">
+    {text}
+  </div>
+
+  <!-- Anmelderens navn -->
+  <div class="font-semibold text-konsultativDesk text-brun-900 p-s">
+    {name}
+  </div>
+</div>
