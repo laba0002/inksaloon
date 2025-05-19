@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import boheme from "../assets/images/boheme_fg.jpg";
+---
+
+<section>
+  <div>
+    <h2>Stort tillykke</h2>
+    <h4>- når I kigger forbi hos INK Saloon, er I helt sikkert igang med at planlægge en festlig begivenhed. Vi er så glade for, at I er her – vi glæder os til at designe unikke invitationer og smuk pynt til netop jeres fest.</h4>
+    <div class="grid sm:grid-cols-5 gap-4 items-center">
+      <div class="col-span-3">
+        <h6>
+          Hos INK Saloon designer vi eksklusive invitationer og papirvarer til livets fester – bryllup, barnedåb, konfirmation, fødselsdag og meget mere. Med over 13 års erfaring og 15.000 fester bag os, er vi blandt Danmarks førende designstudios inden for personlige invitationer og matchende festpynt. Vælg mellem unikke designs, som I selv
+          tilpasser med tekst, fotos og detaljer direkte på vores hjemmeside. Vi bruger nøje udvalgte papirkvaliteter og samarbejder med de bedste trykkerier for at sikre et elegant udtryk – fra bordkort og menukort til takkekort og velkomstskilte. Hos os får I moderne, tidsløst design og en rød tråd til jeres store dag – skabt med passion,
+          præcision og sans for detalje
+        </h6>
+      </div>
+      <div class="col-span-2">
+        <Image src={boheme} class="w-full h-auto object-cover" alt="hej" />
+      </div>
+    </div>
+  </div>
+</section>
