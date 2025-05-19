@@ -1,0 +1,43 @@
+---
+//ts-nocheck
+import MainLayout from "../../layouts/MainLayout.astro";
+import Trestep from "../../components/Trestep.astro";
+import { apiDetails } from "../../settings";
+export async function getStaticPaths() {
+  const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
+    headers: {
+      apikey: apiDetails.supabaseAnonKey,
+      Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
+    },
+  });
+  const data = await res.json();
+
+  return data.map((product) => {
+    return {
+      params: { slug: product.slug },
+      props: { myProduct: product },
+    };
+  });
+}
+
+const { myProduct } = Astro.props;
+---
+
+<MainLayout> 
+
+<section class=" grid grid-cols-2 mx-auto">
+    <img class="w-[600px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
+ <div>   
+  <h3> {myProduct.name}</h3>
+ <div>
+    <h6>Designet af Ink Saloon Studios</h6>
+    <h6>Format: 120 x 170 mm</h6>
+    <h6>Fra 30 DKK/stk</h6>
+ </div>
+
+<!-- indsæt knapper & accordion -->
+</section>
+
+
+<Trestep />
+</MainLayout>

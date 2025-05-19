@@ -22,5 +22,7 @@ console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
 
 
 
-<div class="flex flex-wrap gap-sm">{data.map((product) => <ProductCard {product} /> )}</div>
+<div class="flex flex-wrap  justify-evenly ">
+  {data.map((product) => <ProductCard {product} /> )}
+</div>
 </ListeLayout>
