@@ -1,0 +1,25 @@
+---
+//ts-nocheck
+import MainLayout from "../../layouts/MainLayout.astro";
+import { apiDetails } from "../../settings";
+export async function getStaticPaths() {
+  const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
+    headers: {
+      apikey: apiDetails.supabaseAnonKey,
+      Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
+    },
+  });
+  const data = await res.json();
+
+  return data.map((product) => {
+    return {
+      params: { slug: product.slug },
+      props: { myProduct: product },
+    };
+  });
+}
+
+const { myProduct } = Astro.props;
+---
+
+<MainLayout>  <h1> {myProduct.name}</h1></MainLayout>
