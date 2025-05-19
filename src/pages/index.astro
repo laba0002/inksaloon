@@ -1,9 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import Test from "../components/Test.astro";
 
 import invi1 from "../assets/images/invi_1.png";
 import invi2 from "../assets/images/invi_2.png";
@@ -15,153 +16,148 @@ const imageList = [invi1, invi2, invi3, invi4, invi5];
 const images = imageList.map((img) => img.src);
 ---
 
-
 <MainLayout title="Forside">
   <div class="carousel-container">
     <div class="arrow arrow-left" id="prevBtn">&#8592;</div>
     <div class="card-container" id="cardContainer"></div>
     <div class="arrow arrow-right" id="nextBtn">&#8594;</div>
   </div>
-  
-</MainLayout title="Forside">
+  <Test />
+</MainLayout>
 
 <a href="/produktliste">link</a>
 
-    <style>
-      .carousel-container {
-        position: relative;
-        height: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: visible;
-        padding: 2rem;
-      }
+<style>
+  .carousel-container {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding: 2rem;
+  }
 
-      .card-container {
-        position: relative;
-        width: 300px;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+  .card-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-      .carousel-card {
-        position: absolute;
-        width: 280px;
-        height: auto;
-        transition: all 0.5s ease-in-out;
-        border-radius: 4px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        background-color: white;
-      }
+  .carousel-card {
+    position: absolute;
+    width: 280px;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: white;
+  }
 
-      .left-far {
-        transform: translateX(-240px) rotate(-4deg);
-        z-index: 1;
-        opacity: 0.8;
-      }
+  .left-far {
+    transform: translateX(-240px) rotate(-4deg);
+    z-index: 1;
+    opacity: 0.8;
+  }
 
-      .left {
-        transform: translateX(-120px) rotate(-2deg);
-        z-index: 2;
-        opacity: 0.9;
-      }
+  .left {
+    transform: translateX(-120px) rotate(-2deg);
+    z-index: 2;
+    opacity: 0.9;
+  }
 
-      .center {
-        transform: translateX(0) rotate(0deg);
-        z-index: 5;
-        opacity: 1;
-      }
+  .center {
+    transform: translateX(0) rotate(0deg);
+    z-index: 5;
+    opacity: 1;
+  }
 
-      .right {
-        transform: translateX(120px) rotate(2deg);
-        z-index: 2;
-        opacity: 0.9;
-      }
+  .right {
+    transform: translateX(120px) rotate(2deg);
+    z-index: 2;
+    opacity: 0.9;
+  }
 
-      .right-far {
-        transform: translateX(240px) rotate(4deg);
-        z-index: 1;
-        opacity: 0.8;
-      }
+  .right-far {
+    transform: translateX(240px) rotate(4deg);
+    z-index: 1;
+    opacity: 0.8;
+  }
 
-      .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
-        background: white;
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        z-index: 50;
-        user-select: none;
-      }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 50;
+    user-select: none;
+  }
 
-      .arrow:hover {
-        background: #f8f8f8;
-      }
+  .arrow:hover {
+    background: #f8f8f8;
+  }
 
-      .arrow-left {
-        left: 1rem;
-      }
+  .arrow-left {
+    left: 1rem;
+  }
 
-      .arrow-right {
-        right: 1rem;
-      }
-    </style>
-
-
-  
+  .arrow-right {
+    right: 1rem;
+  }
+</style>
 
 <script define:vars={{ images }}>
-  document.addEventListener('DOMContentLoaded', () => {
-    const positions = ["left-far", "left", "center", "right", "right-far"];
-    let indexes = [0, 1, 2, 3, 4];
-    const container = document.getElementById("cardContainer");
+document.addEventListener("DOMContentLoaded", () => {
+  const positions = ["left-far", "left", "center", "right", "right-far"];
+  let indexes = [0, 1, 2, 3, 4];
+  const container = document.getElementById("cardContainer");
 
-    function render() {
-      if (!container) {
-        console.error('Card container not found');
-        return;
-      }
-
-      container.innerHTML = "";
-      indexes.forEach((imgIdx, posIdx) => {
-        const img = document.createElement("img");
-        img.src = images[imgIdx];
-        img.className = `carousel-card ${positions[posIdx]}`;
-        img.loading = "eager"; // Force immediate loading
-        img.onerror = () => {
-          console.error(`Failed to load image at index ${imgIdx}`);
-          img.src = 'fallback-image-url'; // You might want to add a fallback image
-        };
-        container.appendChild(img);
-      });
+  function render() {
+    if (!container) {
+      console.error("Card container not found");
+      return;
     }
 
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+    container.innerHTML = "";
+    indexes.forEach((imgIdx, posIdx) => {
+      const img = document.createElement("img");
+      img.src = images[imgIdx];
+      img.className = `carousel-card ${positions[posIdx]}`;
+      img.loading = "eager"; // Force immediate loading
+      img.onerror = () => {
+        console.error(`Failed to load image at index ${imgIdx}`);
+        img.src = "fallback-image-url"; // You might want to add a fallback image
+      };
+      container.appendChild(img);
+    });
+  }
 
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        indexes.unshift(indexes.pop()); // rotate left
-        render();
-      });
-    }
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-    if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        indexes.push(indexes.shift()); // rotate right
-        render();
-      });
-    }
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      indexes.unshift(indexes.pop()); // rotate left
+      render();
+    });
+  }
 
-    // Initial render
-    render();
-  });
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      indexes.push(indexes.shift()); // rotate right
+      render();
+    });
+  }
+
+  // Initial render
+  render();
+});
 </script>
-
