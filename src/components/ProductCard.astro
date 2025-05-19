@@ -4,7 +4,7 @@ const { product } = Astro.props;
 
 <article class="w-7xl">
     <a href={`/product/${product.slug}`}>
-        <img src={`/images/${product.image_filename}`} alt={product.navn} />
+        <img src={`/images/${product.image_filename}`} alt={product.name} />
     </a>
     <h6 class="font-light">{product.name}</h6>
     <p class="italic font-light">{product.kategori}</p>
