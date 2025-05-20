@@ -1,0 +1,243 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Accordion from "../components/Accordion.astro";
+---
+
+<MainLayout>
+<section  class="w-9xl md:w-[800px] mx-auto">
+    <Accordion title="Hvordan gør man?" >
+        <h6> Step 1: Vælg design</h6>
+        <p>Vælg en anledning og dit foretrukne design - klassisk eller moderne. Du vælger selv, om det skal printes, sendes digitalt eller printes hjemme. Pris vises på produktsiden.</p>
+            
+        <h6>  Step 2: Tilpas designet</h6>
+        <p>Gør kortet personligt med egen tekst, skrifttype og placering. Tilføj billeder og husk også bagsiden.</p>
+            
+        <h6>Step 3: Godkend og bestil </h6>
+        <p>Tjek for fejl og godkend designet. Vælg kuverter og evt. ekstra produkter som menukort og takkekort - og fortsæt til betaling.</p>
+    </Accordion>
+    <Accordion title="Forsendelse & levering" >
+        <h6> Hvad koster forsendelsen af produkter fra INK Saloon?</h6>
+        <p>GLS PAKKEPOST: Koster DKK 49,- ved forsendelse til GLS PakkeShop. Pakken er forsikret og kan trackes.</p>
+            
+        <h6>Sender I til udlandet?</h6>
+        <p>Ja meget gerne - læs mere herom under internationale ordre længere nede i FAQ teksten.</p>
+            
+        <h6>Hvad er status på min ordre? </h6>
+        <p>Hvis du har oprettet en konto hos INK Saloon, kan du til hver en tid logge ind på din konto og se status på din ordre under 'Ordrehistorik'.</p>
+
+        <h6>Hvor lang tid går der, før jeg modtager mine designs? </h6>
+        <p>Ordrer afsendes som udgangspunkt indenfor 2 hverdage og så er de hos modtager dagen efter (medmindre der går noget galt i posten). Har du brug for, at din ordre bliver hurtigere leveret - så bestil din ordre som en ekspresordre og få den leveret indenfor 1 arbejdsdag hvis den er bestilt inden kl. 12.00 på en hverdag.
+           <br>Ved checkout klikker du "Ja tak" til Ekspresordre. Der pålægges 300 kr. ekstra i håndteringsgebyr.</p>
+
+        <h6>Tilbyder I ekspreslevering?</h6>
+        <p>Har du brug ekspreslevering? Så bestil din ordre som en ekspresordre og få den leveret indenfor 1 arbejdsdag hvis den er bestilt inden kl. 12.00 på en hverdag. Ved checkout klikker du "Ja tak" til Ekspresordre. Der pålægges 300 kr. ekstra i håndteringsgebyr.
+            Vi tager dog forbehold for forsinkelse opstået under forsendelsen. Prisen for eksprestryk er 300 DKK.</p>
+    </Accordion>
+    <Accordion title="Min konto" >
+        <h6>Skal jeg oprette en konto for at lægge en bestilling?</h6>
+        <p>Nej, du behøver ikke oprette en konto for at lægge en bestilling hos INK Saloon. Men det er en god ide, for blot ved at indtaste din mail og et password får du en konto, hvori du kan gemme op til 25 fotos, se dine tidligere bestillinger og følge din nuværende ordre. Du kan også oprette et adressearkiv m.m.</p>
+            
+        <h6>Hvordan opdaterer jeg mine kontooplysninger?</h6>
+        <p>For at opdatere dine kontooplysninger, skal du blot logge ind på din konto. Når du er logget ind, kan du under "Mine oplysninger" opdatere din adresse m.m. Det er også her, du kan ændre din adgangskode. <br>
+            <i>Hvordan ændrer jeg min adgangskode? </i><br>
+            Log ind på din konto og lav din adgangskode om i feltet 'Mine oplysninger'. Har du glemt din adgangskode, kan du få tilsendt en ny via det pop-up vindue, der kommer frem, når du klikker 'Log ind'.</p>
+            
+        <h6>Kan jeg gemme de designs, jeg synes bedst om? </h6>
+        <p>Ja, du klikker blot på hjertet, der følger med hvert design. Når du klikker på hjertet, bliver det orange, og du vil kunne se det i din mappe i toppen af sitet under feltet 'Favoritter' eller  i din kontooversigt. Hvis du ønsker at fjerne designet fra dine favoritter, klikker du blot på hjertet igen, så det bliver gråt. </p>
+
+        <h6>Hvad er fordelen ved at oprette et adressearkiv?</h6>
+        <p>I vores adressearkiv vil du altid have adgang til dine kontakter, og du kan gruppere dine kontakter og blot tilføje en bestemt gruppe eller flere, når du designer adresselabels.</p>
+
+
+        <h6>Hvordan opretter jeg et adressearkiv?</h6>
+        <p>Først og fremmest skal du have oprettet en INK Saloon konto. Det er nemt - klik på 'Log ind' i toppen af højre hjørne og opret din konto. Hvis du allerede har en konto, kan du få adgang til din adressebog direkte fra fanen 'Min Konto'. I adressebogen kan du gemme alle dine kontakters adresser. 1. Start med at udfylde 'Kontaktoplysninger' på din kontakt ved at taste dem ind manuelt.  Herefter fremgår kontakten nu i 'Kontakter'. 2. Opret nu en gruppe til kontakter - i feltet 'Grupper' klik på 'Opret ny gruppe', et pop-up vindue åbner, og du kan nu oprette f.eks. gruppen 'Familie' og klikke på de af dine kontakter, du ønsker skal indgå i denne gruppe. Du kan altid ændre kontaktens adresse eller gruppe ved at klikke på den og herefter redigere den i feltet 'Kontaktoplysninger'.</p>
+    </Accordion>
+    <Accordion title="Designproces" >
+        <h6>Kan jeg se mit personliggjorte kort inden jeg lægger min bestilling?</h6>
+        <p>Ja. Det der gør INK Saloons webshop helt speciel er, at du kan se de ændringer, du laver ved et design med det samme. Og når du er færdig med at skabe dit personlige design, kommer både for- og bagside af dit design frem til din godkendelse.</p>
+            
+        <h6>Er der matchende tilbehør såsom adresselabels, takkekort, menukort, bordkort osv. til det design jeg har valgt?</h6>
+        <p>Til samtlige invitationer I ser på sitet og på instagram kan vi lave alt det matchende tilbehør I skulle ønske jer - herunder velkomstskilt, salmehæfte, bordoversigt, bordnumre, menukort, bordkort, drinkskort mm. Alt i samme stil og røde tråd med invitationerne. Og vi printer på alt fra papir, træ og akryl. 
+            <br>Hvis du er interesseret i matchende tilbehør til et specifikt design, er du meget velkommen til at kontakte os idet de endnu ikke er lagt på sitet.</p>
+            
+        <h6>Kan jeg ændre skrifttype og skriftstørrelse på mit design? </h6>
+        <p>Ja, du kan frit vælge imellem alle de skrifttyper og skriftstørrelser, der er i vores arkiv. Dette gør du inde i tekstfeltet på det pågældende design.</p>
+
+        <h6>Kan jeg bruge en specifik skrifttype på mit udvalgte design?</h6>
+        <p>Ja, du kan frit vælge imellem alle de skrifttyper, der er i vores skriftarkiv. Dette gør du inde i tekstfeltet på det pågældende design.</p>
+
+        <h6>Kan jeg flytte rundt på teksten i designet?</h6>
+        <p>Ja, du trækker blot i tekstfeltet og flytter det hvorhen på designet, du ønsker.</p>
+
+        <h6>Kan jeg ændre et design fra at være f.eks. en barnedåbsinvitation til at være en fødselsdagsinvitation?</h6>
+        <p>Ja meget gerne - vi elsker når vores kunder finder på nye kreative måder at arbejde med vores designs på!</p>
+
+        <h6>Vi vil gerne have vores gæsters navne på designet - er det muligt?</h6>
+        <p>Ja, for et tillæg på 10 kr. pr. invitation kan vi indsætte navne på gæster. I så fald skal det ske manulet ved at I sender os en navneliste pr. mail. Alternativt, gør evt. plads i designet til dine gæsters navne ved at tilføje et 'Kære' efterfulgt af en tom plads, så kan du efterfølgende skrive gæsternes navne på i hånden.</p>
+
+        <h6>Der er et design, som jeg rigtig gerne så i andre farver - er det muligt at ændre farven?</h6>
+        <p>Måske - send en mail til os med dit ønske om farveændring, så ser vi på, om det er noget vi kan imødekomme.</p>
+
+        <h6>Kan jeg også personliggøre bagsiden af mit design?</h6>
+        <p>Ja, du kan vælge imellem 3 skabeloner til bagsiden af dit kort. 1. Med foto uden tekst. 2. Med tekst uden foto. 3. Med både foto og tekst. Bemærk at INK Saloons logo altid vil blive påtrykt i bunden på bagsiden af dit kort medmindre I skriver i bemærkninger ved check out at I ønsker det fjernet.</p>
+
+        <h6>Kan jeg bestille mindre end 15 stk. pr. design?</h6>
+        <p>Nej, pt. er det ikke muligt at bestille mindre end 15 stk. pr. design.</p>
+
+        <h6>Hvilke formater af kort kan jeg vælge imellem?</h6>
+        <p>Du kan vælge imellem flg. formater: <br>12 x 17 cm. <br>10 x 21 cm. <br>14,5 x 14,5 cm. <br>14,8 x 21 cm.</p>
+
+        <h6>Kan jeg lave ændringer i mit design, når jeg først har godkendt det?</h6>
+        <p>a, du kan altid gå tilbage og ændre i dit design undervejs, så længe du ikke har afsluttet og betalt for ordren.</p>
+
+        <h6>Kan jeg lave ændringer i mit design, når jeg har afsluttet og betalt for ordren?</h6>
+        <p>Nej, der ydes ingen fortrydelsesret på INK Saloons varer, såfremt fremstillingen eller tilpasningen er påbegyndt, idet de skal fremstilles og tilpasses efter dine individuelle behov. Ved accept af vilkår i forbindelse med bestilling af vores varer, accepterer du samtidig, at fremstillingen af varen kan påbegyndes.</p>
+
+        <h6>Hvad skal jeg være opmærksom på, før jeg godkender mit design?</h6>
+        <p>Bemærk omhyggeligt om alle navne, datoer, steder osv. er stavet korrekt, og at foto er i optimal printkvalitet.</p>
+    </Accordion>
+    <Accordion title="Fotos" >
+        <h6>Hvordan sikrer jeg, at mit foto er i god printkvalitet?</h6>
+        <p>Vi anbefaler, at du bruger det originale foto fra dit kamera eller din telefon - uden at det er blevet beskåret eller minimeret i billedkvaliteten. For at undgå, at dit foto bliver grynet eller pixeleret ved print, anbefales det at fotos er i minimum 300 DPI.</p>
+            
+        <h6>Jeg har fået en advarsel om, at mit foto ikke er i god billedkvalitet. Hvad betyder det?</h6>
+        <p>Når du uploader dit foto, vil vores site automatisk advare dig, hvis dit foto er i for ringe printkvalitet. Denne advarsel er en automatisk genereret beregning af den faktiske dimension og pixelstørrelse på dit foto, så du bør følge instruktionerne, hvis vi beder dig om at uploade en højere opløsning af fotoet. Vi anbefaler, at dit foto er minimum 300 DPI eller større. En lavere opløsning af foto kan resultere i slørede eller pixelerede fotos, når designet er printet. Selvom det blotte øje ikke umiddelbart kan se en forskel på skærmen, vil det printede resultat ikke blive godt. For at sikre en høj opløsning af foto anbefaler vi, at du altid bruger det originale foto fra dit digitale kamera eller din mobiltelefon, skudt i den højeste opløsning kameraet understøtter.</p>
+            
+        <h6>Hvordan ser jeg, hvor mange DPI mit foto er i?</h6>
+        <p>Hertil kræves, at du har et fotoredigeringsprogram installeret på din computer.</p>
+
+        <h6>Er det også vigtigt med 300 DPI, på et design der ikke skal printes?</h6>
+        <p>Hvis designet skal sendes ud pr. mail, er DPI fuldstændig ligegyldigt. Fotokvaliteten vil blive som den, du ser på skærmen.</p>
+
+        <h6>Hvilke fotoformater kan jeg uploade?</h6>
+        <p>Systemet accepterer upload af flg. filformater: jpg, png, gif, tif eller bmp filer.</p>
+
+        <h6>Kan jeg se forskellige fotos indsat i designet?</h6>
+        <p>Ja, du kan se alle de fotos fra dit fotoarkiv, du har lyst til i dit design - du trækker dem blot ind i fotofeltet.</p>
+        
+        <h6>Hvilke muligheder har jeg for at redigere i mit billede?</h6>
+        <p>Vores fotoredigeringsprogram er meget nemt at bruge og tilbyder dig at zoome ind og ud på foto, rotere fotoet, ændre til sort/hvid foto og trække fotoet til, hvor du ønsker det placeret i billedfeltet. Du kan altid gå tilbage til originalfotoet ved at trykke på stjernen.</p>
+        
+        <h6>Hvor mange fotos kan jeg gemme i mit fotoarkiv?</h6>
+        <p>Du kan gemme op til 25 fotos i dit fotoarkiv.</p>
+        
+    </Accordion>
+    <Accordion title="Kuverter" >
+        <h6>Passer det, at kuverter følger med i prisen?</h6>
+        <p>Ja, der følger det samme antal hvide kuverter med som det antal kort, du har bestilt. Farvet kuverter kan tilkøbes for 6 kr/stk. ved at sende os en mail.</p>
+            
+        <h6>Kan jeg vælge imellem flere forskellige typer kuverter?</h6>
+        <p>Ja vi har kuverter i mange skønne farver som kan tilkøbes for 6 kr./stk. Kontakt os via info@inksaloon.com for nærmere info. Der følger altid gratis hvide kuverter med jeres invitationer.</p>
+            
+        <h6>Kan jeg tilkøbe ekstra kuverter?</h6>
+        <p>Ja, du kan sagtens tilkøbe ekstra kuverter i tilfælde af, at du skulle skrive forkert. Disse kan tilvælges i checkout-processen, når du har designet dit kort.</p>
+
+        <h6>Tilbyder I matchende adresselabels?</h6>
+        <p>Ja, til alle designs er det muligt at tilkøbe matchende adresselabels. Disse fremkommer efter du har personliggjort dit kort.</p>
+
+        <h6>Er det muligt, at I kan håndtere udsendelsen af mine kort?</h6>
+        <p>Ja, lad INK Saloon håndtere din udsendelse af kort, så er det eneste du skal gøre at personliggøre dit kort og uploade dine modtageres adresser. Så klarer vi resten. Lettere kan det ikke gøres! Prisen for at lade INK Saloon håndtere din udsendelse er flg.: Håndtering og pakning: DKK 7,-. pr. kort + B-Porto i Danmark: DKK 8,-. Herudover skal pålægges pris på 'Til-labels' samt evt. 'Fra-label'</p>
+        
+    </Accordion>
+    <Accordion title="Kvalitet" >
+        <h6>Hvilken papirkvalitet bliver der trykt i?</h6>
+        <p>Som standard trykkes alle vores produkter på 300 gram ubestrøget papir i en let struktureret kvalitet og knækket hvid farve </p>
+            
+        <h6>Er det muligt at vælge en anden papirkvalitet?</h6>
+        <p>Ja vi tilbyder også at trykke på kalkerpapir. Let gennemsigtigt hvidt papir. Send os gerne en mail med navn, adresse og telefonnummer og vi sender jer et sample-kit af de forskellige kvaliteter. Et sample-kit koster 50 kr. (portoen).</p>
+            
+        <h6>Tilbyder I Letterpress tryk?</h6>
+        <p>JJa kontakt os for nærmere info på info@inksaloon.com. Beskriv opgaven samt antal på invitationer og vi sender et tilbud.</p>
+
+        <h6>Kan jeg bestille et prøvetryk?</h6>
+        <p>Ja, vi sender dig gerne et gratis prøvetryk af vores kort. Dog kan vi ikke sende dig et specifikt kort, men blot et generelt kort, hvorpå du kan se papir- og trykkvaliteten. Send os en mail hvori du skriver 'Prøvetryk' og inkludér din adresse, så får vi et kort af sted til dig hurtigst muligt.</p>
+    </Accordion>
+    <Accordion title="Betaling" >
+        <h6>Hvilke betalingsformer accepterer I?</h6>
+        <p>Hos INK Saloon kan du betale med Dankort, Visa/Dankort, eDankort, MasterCard, Maestro og Visa Electron.</p>
+            
+        <h6>Hvornår trækkes beløbet på min konto?</h6>
+        <p>Ved personliggjorte produkter trækkes beløbet samtidig med at ordren er gennemført. Der kan kun trækkes det beløb, du har angivet eller mindre - og kun én gang.</p>
+            
+        <h6>Hvordan ved jeg, at det er sikkert at handle med jer?</h6>
+        <p>Det er helt sikkert at handle med betalingskort hos os, idet al kommunikation mellem vores betalingssystem og kortindehaveren foregår via en krypteret SSL forbindelse (Secure Socket Layer). Det er kun PBS, der har adgang til data forbundet med betalingen. Hverken INK Saloon eller andre uvedkommende har mulighed for at se de data, der udveksles.</p>
+
+        <h6>Hvad hvis jeg ikke er tilfreds med det produkt jeg modtager?</h6>
+        <p>JSå skal du selfølgelig sende os en mail og gøre os opmærksom herpå. Vedlæg et foto og beskriv hvorfor du ikke er tilfreds så ser vi på det og ser om vi ikke kan finde en fin løsning. <br>
+            Som udgangspunkt ydes der reklamationsret i henhold til købeloven omfattende fabrikations- og materialefejl, der konstateres ved varens ankomst. Reklamation over fejl som bør opdages ved sædvanlig undersøgelse af varen, skal meddeles INK Saloon inden for rimelig tid. Varen kan efterfølgende returneres for ombytning eller efter aftale evt. kreditering. Bemærk: INK Saloon kan ikke holdes ansvarlige for fotos der er pixelerede, slørede eller andet. Det er på kundens eget ansvar at uploade et printervenligt foto, ligesom det er kundens eget ansvar at tekst, datoer m.m. er indtastet korrekt.</p>
+
+        <h6>Kan jeg fortryde mit køb?</h6>
+        <p>Der ydes ingen fortrydelsesret på INK Saloons varer, såfremt fremstillingen eller tilpasningen er påbegyndt, idet de skal fremstilles og tilpasses efter dine individuelle behov. Ved accept af vilkår i forbindelse med bestilling af vores varer, accepterer du samtidig, at fremstillingen af varen kan påbegyndes.</p>
+    
+
+        <h6>Hvordan indtaster jeg en rabatkode?</h6>
+        <p>Rabatkoden skal angives i kommentarfeltet ved ordreafgivelse. Rabatten fremgår ikke ved udcheckning men rabatten vil ikke blive trukket fra din konto. Rabatkoden er gyldigt til den dato der står på rabatkoden. Der kan ikke benyttes flere rabatkoder pr. ordre.</p>
+    </Accordion>
+    <Accordion title="International ordre" >
+        <h6>Sender I til udlandet?</h6>
+        <p>Ja forsendelser til udlandet sker med Post Danmark og posten udsendes som maxibrev. Prisen til Skandinavien, øvrige Europa, Færøerne og Grønland er DKK 83.- uanset antal ordre. Ordren kan ikke trackes. Gratis forsendelse ved køb over DKK 1200,-. Forsendelser til øvrige udland sker med PostDanmark og posten udsendes som maxibrev. Prisen til det øvrige udland er DKK 127,- uanset antal ordre. Ordren kan ikke trackes. Gratis forsendelse ved køb over DKK 1500,-.</p>
+ 
+        <p>Bestiller du fra et andet EU-land, betales dansk moms og ingen told efter reglerne om varernes frie bevægelighed. Bestiller du fra et ikke EU-land, vil du ikke betale dansk moms, men varerne kan blive pålagt told og moms i dit hjemland. Har du spørgsmål til forsendelser til udlandet - så kontakt os på info@inksaloon.dk så vil vi hjælpe dig.</p>          
+
+    </Accordion>
+    <Accordion title="I øvrigt" >
+        <h6>Hvordan fungerer det med nyhedsbrev fra INK Saloon?</h6>
+        <p>JTilmeld dig vores nyhedsbrev på forsiden og du vil være den første til at modtage tilbud, nyheder og invitationer til konkurrencer og andre spændende arrangementer med INK Saloon. Du kan til enhver tid afmelde dig nyhedsbrevet igen. Dette gøres ved at sende os en mail på info@inksaloon.com.</p>
+        
+        <h6> Kan I lave en specialdesignet opgave for mig?</h6>
+        <p> Det er muligt - send os en mail hvori du beskriver opgaven, og vi vender straks tilbage.</p>
+        
+        <h6>Kan man købe et gavekort?</h6>
+        <p>Ja selvfølgelig - send os en mail med det beløb du ønsker gavekortet udstedt på, og vi sender dig efterfølgende et flot gavekort.</p>
+ 
+        <h6>Kan vi undgå at få INK Saloon logo bag på vores design?</h6>
+        <p>INK Saloons logo er som standard trykt i bunden af bagsiden på alle designs. Ønsker I ikke at have logo påtrykt så skriv det blot i beskedboksen til os ved checkout. Alternativ send os en mail herom når I har placeret ordren.</p>
+ 
+        <h6>Hvilke browsere og styringssystemer kræves der for at lave en ordre på INK Saloon?</h6>
+        <p>IVi håndtere flg. styringssytemer: <br>Windows <br>Mac</p>
+        
+        <p>Vi håndtere flg. browsere: <br>Internet Explorer 8.0 eller nyere <br>Firefox 3.0 eller nyere <br>Google Chrome 4.0 eller nyere <br>Safari 4.0 eller nyere</p>
+        
+    </Accordion>
+    <Accordion title="Hvorfor vælge Ink Saloon?" >
+
+        <p>INK Saloon tilbyder eksklusive grafiske invitationer og  kort, designet specielt til din anledning via vores online platform. Vi  har base i København og vores stil har udgangspunkt i skandinavisk  design, kombineret med de nyeste tendenser fra udlandet.</p>
+
+<p>
+                Vi i Danmark er kendt for vores gode smag og udsøgte  design. Men når det kommer til stilfulde designs af invitationer og  øvrige papirvarer, er udbuddet nærmest ikke eksisterende. Det vil vi hos INK Saloon lave om på ved at give alle adgang til smukke og unikke  invitationer og kort. Med vores særligt udviklede platform, gør vi det  samtidig sjovt og nemt for dig at personliggøre dit udvalgte design. Ved at benytte den nyeste digitale trykteknik, kan INK Saloon garantere høj kvalitet til en fornuftig pris, samt hurtig levering.
+    
+</p>            
+<p>
+                Med et håndplukket team af talentfulde grafiske designere og illustratorer med fingeren på pulsen og øje for de stærkeste trends, sikrer INK Saloon, med Rikke Lénart ved roret, at der løbende kommer  nye lækre designs til sitet – skræddersyet til hver enkelt lejlighed.
+    
+</p>            
+<p>
+                Hvordan det hele startede
+    
+<p>
+    </p>            INK Saloon webshop er lanceret i oktober 2013. Men jeg  startede med at arbejde på INK Saloon tilbage i 2011, kort efter fødslen af mit barn nummer to. Allerede ved planlægningen af mit første barns  dåbsfest, gik det op for mig, hvor ringe udvalget var af  invitationskort, som ikke blot kunne rumme det personlige budskab, men  også leve op til mine forventninger om lækkert design og høj kvalitet.
+    
+</p>            
+           <p>
+                Det undrede mig, for jeg kunne da umuligt være den  eneste, der mener at en flot og original invitation er til glæde for  både giver og modtager. Personligt elsker jeg at komme hjem til folk med opslagstavler, der gør at man kan følge med i alt fra bryllupper til  fødselsdage og nyankomne babyer.
+                Selvom vi lægger al vores hjerte og sjæl i de særlige  begivenheder, bærer kort og indbydelser tit mere præg af manglende  valgmuligheder end af afsenderens person og smag. Min irritation  fortsatte, da jeg søgte invitationer til mit bryllup, til de mange  børnefødselsdage og unikke julekort, hvori jeg kunne tilføje et foto af  børnene, samt en hilsen.
+           </p>
+            
+           <p>
+                Det fik mig til at tænke, at det da burde være muligt at  sende en indbydelse ud, som udtrykker afsenderens personlighed, er  indbydende at se på og samtidig er topdesignet og skræddersyet til  lejligheden. Sådan fik jeg idéen til INK Saloon.
+                Herefter fulgte en forretningsplan, flere års udvikling  af et meget intelligent og brugervenligt site og ikke mindst udvælgelse  af talentfulde designere fra verden over, der alle har bidraget til en  æstetisk, unik og udsædvanlig smuk produktlinje til INK Saloons kunder.
+                Jeg håber, at du vil finde det fornøjeligt at handle hos  os og glæder mig til at kunne hjælpe dig med personlige og stilfulde  designs af invitationer og hilsner til alle livets fester, højtider og  mærkedage.
+           </p>
+            
+      <p>
+                Rikke Lénart <br>
+                grundlægger af INK Saloon.
+      </p>
+    
+  
+    </Accordion>
+</section>
+</MainLayout>
