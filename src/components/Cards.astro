@@ -7,28 +7,35 @@ import fodselsdag from "../assets/images/fodselsdag_card.jpg";
 ---
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-m sm:px-2xl">
-  <div class="relative group">
-    <Image src={bryllup} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="bryllup" />
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Bryllup</h6>
+  <!-- Bryllup -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={bryllup} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Bryllup" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Bryllup</i></h6>
     </div>
   </div>
-  <div class="relative group">
-    <Image src={konfirmation} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="konfirmation" />
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Konfirmation</h6>
+
+  <!-- Konfirmation -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={konfirmation} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Konfirmation" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Konfirmation</i></h6>
     </div>
   </div>
-  <div class="relative group">
-    <Image src={barnedaab} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="barnedåb" />
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Barnedåb</h6>
+
+  <!-- Barnedåb -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={barnedaab} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Barnedåb" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Barnedåb</i></h6>
     </div>
   </div>
-  <div class="relative group">
-    <Image src={fodselsdag} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="fødselsdag" />
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Fødselsdag</h6>
+
+  <!-- Fødselsdag -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={fodselsdag} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Fødselsdag" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Fødselsdag</i></h6>
     </div>
   </div>
 </div>
