@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
+import FakeNav from "../components/FakeNav.astro";
 ---
 
 <html lang="da">
@@ -32,8 +33,10 @@ const { title } = Astro.props;
 			  <source src="/herovideo.mp4" type="video/mp4" />
 			</video>
 		</div>
-	  </section>
-    </header>
+	</section>
+</header>
+ <FakeNav />
+
 
     <main>
       <slot />
