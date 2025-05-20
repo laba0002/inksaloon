@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import bryllup from "../assets/images/bryllup_card.jpg";
+import konfirmation from "../assets/images/konfirmation_card.jpg";
+import barnedaab from "../assets/images/barnedaab_card.jpg";
+import fodselsdag from "../assets/images/fodselsdag_card.jpg";
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-m sm:px-2xl">
+  <div class="relative group">
+    <Image src={bryllup} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="bryllup" />
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Bryllup</h6>
+    </div>
+  </div>
+  <div class="relative group">
+    <Image src={konfirmation} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="konfirmation" />
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Konfirmation</h6>
+    </div>
+  </div>
+  <div class="relative group">
+    <Image src={barnedaab} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="barnedåb" />
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Barnedåb</h6>
+    </div>
+  </div>
+  <div class="relative group">
+    <Image src={fodselsdag} class="w-full h-auto object-cover brightness-75 group-hover:brightness-150 transition duration-300 rounded-2xl" alt="fødselsdag" />
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h6 class="text-hvidgul-50 text-smallDesk font-semibold">Fødselsdag</h6>
+    </div>
+  </div>
+</div>

@@ -20,6 +20,13 @@ const { title } = Astro.props;
   <body class="bg-hvidgul-500">
     <header>
       <Header />
+      <section class="relative w-full h-[600px]">
+        <div class="absolute top-0 left-0 w-full h-[500px]">
+          <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="/herovideo.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
     </header>
 
     <main>
