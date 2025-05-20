@@ -97,7 +97,7 @@ export default {
       smallMediumMobile: ["1.7rem", { lineHeight: "2.5rem" }],
       mediumMobile: ["2rem", { lineHeight: "3rem" }],
       mediumLargeMobile: ["2.5rem", { lineHeight: "3.75rem" }],
-      largeMobile: ["3rem", { lineHeight: "4,5rem" }],
+      largeMobile: ["3rem", { lineHeight: "4.5rem" }],
     },
   },
 
