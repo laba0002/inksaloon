@@ -22,9 +22,13 @@ const images = imageList.map((img) => img.src);
 
 <MainLayout title="Forside">
   <div class="carousel-container">
-    <div class="arrow arrow-left" id="prevBtn">&#8592;</div>
+    <div class="arrow arrow-left" id="prevBtn"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="58" viewBox="0 0 29 58" fill="none">
+      <path d="M23.0744 42.0984L20.5103 44.6601L6.54436 30.699C6.31924 30.4753 6.14058 30.2093 6.01866 29.9163C5.89675 29.6232 5.83398 29.309 5.83398 28.9916C5.83398 28.6743 5.89675 28.36 6.01866 28.067C6.14058 27.774 6.31924 27.508 6.54436 27.2843L20.5103 13.3159L23.072 15.8776L9.96395 28.988L23.0744 42.0984Z" fill="#443935"/>
+      </svg></div>
     <div class="card-container" id="cardContainer"></div>
-    <div class="arrow arrow-right" id="nextBtn">&#8594;</div>
+    <div class="arrow arrow-right" id="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="60" viewBox="0 0 29 60" fill="none">
+      <path d="M5.92563 16.6758L8.48972 14.07L22.4556 28.2718C22.6808 28.4994 22.8594 28.77 22.9813 29.068C23.1033 29.3661 23.166 29.6858 23.166 30.0086C23.166 30.3315 23.1033 30.6511 22.9813 30.9492C22.8594 31.2473 22.6808 31.5179 22.4556 31.7454L8.48972 45.9546L5.92805 43.3488L19.0361 30.0123L5.92563 16.6758Z" fill="#443935"/>
+    </svg></div>
   </div>
   <Test />
   <Trestep />
@@ -55,7 +59,7 @@ const images = imageList.map((img) => img.src);
 
   .card-container {
     position: relative;
-    width: 300px;
+    width: 230px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -108,16 +112,9 @@ const images = imageList.map((img) => img.src);
     transform: translateY(-50%);
     font-size: 2rem;
     padding: 0.5rem 1rem;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     z-index: 50;
     user-select: none;
-  }
-
-  .arrow:hover {
-    background: #f8f8f8;
   }
 
   .arrow-left {

@@ -1,6 +1,6 @@
 ---
 ---
-<div class=" text-hvidgul-50 bg-transparent-brun" >
+<div x-data="{ showmenu: false }" class=" text-hvidgul-50 bg-transparent-brun" >
 
      <div class="mx-xs flex flex-row items-center justify-between space-y-xs m-auto mb-xs ">
                <!-- <div class=" flex flex-row content-baseline border-hvidgul-50 border-solid border-b w-6xl">
@@ -10,7 +10,7 @@
                     <hp class="italic text-hvidgul-50 ml-xxs font-light">Søg</hp>
                </div> -->
           
-          <form action="/søg" method="GET" class="w-6xl">
+          <form action="/søg" method="GET" class="w-6xl hidden md:block">
                     <div class="flex flex-row items-center border-hvidgul-50 border-solid border-b">
                       <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
                         <path d="M15.1269 13.2813H14.2235L13.9033 12.9725C15.0628 11.6278 15.7 9.911 15.6986 8.13546C15.6986 6.66538 15.2627 5.22833 14.446 4.00601C13.6293 2.78368 12.4684 1.831 11.1102 1.26843C9.75207 0.705857 8.25758 0.558663 6.81576 0.84546C5.37393 1.13226 4.04953 1.84016 3.01003 2.87966C1.97053 3.91916 1.26263 5.24356 0.975831 6.68539C0.689034 8.12721 0.836228 9.6217 1.3988 10.9799C1.96137 12.338 2.91406 13.4989 4.13638 14.3156C5.3587 15.1323 6.79576 15.5683 8.26583 15.5683C10.1069 15.5683 11.7993 14.8936 13.1029 13.773L13.4116 14.0931V14.9965L19.1292 20.7026L20.833 18.9988L15.1269 13.2813ZM8.26583 13.2813C5.41849 13.2813 3.12003 10.9828 3.12003 8.13546C3.12003 5.28812 5.41849 2.98966 8.26583 2.98966C11.1132 2.98966 13.4116 5.28812 13.4116 8.13546C13.4116 10.9828 11.1132 13.2813 8.26583 13.2813Z" fill="#FFFDFA"/>
@@ -23,8 +23,43 @@
                       />
                     </div>
                </form>
+               <button id="burgermenu" class=" top-s left-s md:hidden z-50 w-m h-h" x-on:click="showmenu = !showmenu">
+                <svg
+                    x-show="!showmenu"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    stroke="#FFFDFA"
+                    class="w-8 h-8 transition-transform duration-300 ease-in-out">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M3 12h18m-18 6h18" />
+                </svg>
+                <svg
+                    x-show="showmenu"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1"
+                    stroke="#FFFDFA"
+                    class="w-8 h-8 transition-transform duration-300 ease-in-out">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav id="mobilmenu" class="flex flex-col content-center relative" 
+            x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+                <!-- <div class="fill-red-700 absolute -top-36 md:-right-4 w-screen h-40 -right-3 -z-10 transition">
+                </div> -->
+    
+                    <ul class="bg-hvidgul-500 gap-s flex flex-col text-red-600">
+                      <li class="text-center"><a href="/ompakken" class="transition"><h6>Om pakken</h6></a></li>
+                      <li class="text-center"><a href="/omos" class="transition"><h6>Om os</h6></a></li>            
+                      <li class="text-center"><a href="/kontakt" class="transition"><h6>Kontakt</h6></a></li>
+                      <li class="text-center"><a href="/faq" class="transition"><h6>FAQ</h6></a></li>
+                    </ul>
+               
+            </nav>
          
-               <div class="pb-xs">
+               <div class="w-[100px] md:w-auto pb-xs md:ml-xs">
               <a href="/" >
                  <svg xmlns="http://www.w3.org/2000/svg" width="152" height="67" viewBox="0 0 152 67" fill="none">
                       <g clip-path="url(#clip0_405_864)">
@@ -67,7 +102,7 @@
                            <path d="M10 20.5L8.55 19.0613C3.4 13.9714 0 10.6035 0 6.49455C0 3.1267 2.42 0.5 5.5 0.5C7.24 0.5 8.91 1.38283 10 2.76703C11.09 1.38283 12.76 0.5 14.5 0.5C17.58 0.5 20 3.1267 20 6.49455C20 10.6035 16.6 13.9714 11.45 19.0613L10 20.5Z" fill="#E1683B"/>
                           </svg>
                     </div>
-                    <p class="text-hvidgul-50">Favoritter</p>
+                    <p class="text-hvidgul-50 hidden md:block">Favoritter</p>
                </div>
           
                <div  class="flex flex-row content-baseline gap-xxs">
@@ -75,14 +110,14 @@
                       <path d="M14.795 8.8027L10.5844 2.80649L6.37371 8.8027L5.07812 7.76486L9.93657 0.845946C10.012 0.738533 10.1098 0.651352 10.2222 0.591306C10.3347 0.531261 10.4587 0.5 10.5844 0.5C10.7101 0.5 10.8341 0.531261 10.9465 0.591306C11.0589 0.651352 11.1567 0.738533 11.2322 0.845946L16.0906 7.76486L14.795 8.8027Z" fill="#FFFEFB"/>
                       <path d="M19.9765 7.41895H1.1915C1.09981 7.41891 1.0093 7.44105 0.926763 7.48371C0.844227 7.52637 0.771806 7.58843 0.714932 7.66525C0.658058 7.74207 0.618207 7.83164 0.598369 7.92725C0.578531 8.02287 0.57922 8.12204 0.600386 8.21732L3.32618 20.5H17.8418L20.5676 8.21732C20.5887 8.12204 20.5894 8.02287 20.5696 7.92725C20.5498 7.83164 20.5099 7.74207 20.453 7.66525C20.3962 7.58843 20.3237 7.52637 20.2412 7.48371C20.1587 7.44105 20.0682 7.41891 19.9765 7.41895ZM10.584 16.0492C10.2068 16.0473 9.83863 15.926 9.52594 15.7008C9.21324 15.4755 8.97005 15.1563 8.82707 14.7835C8.68409 14.4108 8.64775 14.0011 8.72262 13.6062C8.79748 13.2114 8.98021 12.8491 9.24773 12.5651C9.51524 12.2811 9.85555 12.0882 10.2257 12.0106C10.5958 11.9331 10.9791 11.9744 11.3273 12.1293C11.6754 12.2843 11.9728 12.546 12.1818 12.8814C12.3908 13.2167 12.502 13.6107 12.5016 14.0135C12.4986 14.5546 12.2953 15.0725 11.936 15.4539C11.5766 15.8353 11.0906 16.0494 10.584 16.0492Z" fill="#FFFEFB"/>
                       </svg>
-                      <p class="text-hvidgul-50">Kurv</p>
+                      <p class="text-hvidgul-50 hidden md:block">Kurv</p>
                </div>
           
                <div  class="flex flex-row content-baseline gap-xxs">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
                     <path d="M10.208 10.5C8.83301 10.5 7.65592 10.0104 6.67676 9.03125C5.69759 8.05208 5.20801 6.875 5.20801 5.5C5.20801 4.125 5.69759 2.94792 6.67676 1.96875C7.65592 0.989584 8.83301 0.5 10.208 0.5C11.583 0.5 12.7601 0.989584 13.7393 1.96875C14.7184 2.94792 15.208 4.125 15.208 5.5C15.208 6.875 14.7184 8.05208 13.7393 9.03125C12.7601 10.0104 11.583 10.5 10.208 10.5ZM0.208008 20.5V17C0.208008 16.2917 0.390508 15.6408 0.755508 15.0475C1.12051 14.4542 1.60467 14.0008 2.20801 13.6875C3.49967 13.0417 4.81217 12.5575 6.14551 12.235C7.47884 11.9125 8.83301 11.7508 10.208 11.75C11.583 11.7492 12.9372 11.9108 14.2705 12.235C15.6038 12.5592 16.9163 13.0433 18.208 13.6875C18.8122 14 19.2968 14.4533 19.6618 15.0475C20.0268 15.6417 20.2088 16.2925 20.208 17V20.5H0.208008Z" fill="#FFFEFB"/>
                </svg>
-                      <p class="text-hvidgul-50">Log in</p>
+                      <p class="text-hvidgul-50 hidden md:block">Log in</p>
                </div>
           </div>
       </div>

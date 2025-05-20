@@ -2,7 +2,7 @@
 const { product } = Astro.props;
 ---
 
-<article class="w-7xl">
+<article class="w-[200px] md:w-[300px]">
     <a href={`/produkt/${product.slug}`}>
         <img src={`/images/${product.image_filename}`} alt={product.name} />
     </a>
