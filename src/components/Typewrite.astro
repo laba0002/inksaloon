@@ -1,0 +1,40 @@
+---
+---
+<div class="w-full h-3xl text-center sm:mt-xl px-m text-4xl">
+  <h4>Find din perfekte invitation til &nbsp;</h4>
+  <i><h3 id="typewriter" class=""></h3></i>
+</div>
+
+<script>
+  const words = ["brylluppet", "konfirmationen", "barnedåben", "fødselsdagen", "de store øjeblikke"];
+  let i = 0;
+  let j = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentWord = words[i];
+    const typewriterEl = document.getElementById("typewriter");
+
+    if (isDeleting) {
+      j--;
+      typewriterEl.textContent = currentWord.substring(0, j);
+      if (j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+      }
+    } else {
+      j++;
+      typewriterEl.textContent = currentWord.substring(0, j);
+      if (j === currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, 1500);
+        return;
+      }
+    }
+
+    setTimeout(type, isDeleting ? 70 : 150);
+  }
+
+  type();
+</script>
+
