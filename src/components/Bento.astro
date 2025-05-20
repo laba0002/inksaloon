@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import long1 from "../assets/images/long1.jpg";
+import long2 from "../assets/images/long2.jpg";
+import square1 from "../assets/images/square1.jpg";
+import square2 from "../assets/images/square2.jpg";
+import square3 from "../assets/images/square3.jpg";
+import weight1 from "../assets/images/weight1.jpg";
+import weight2 from "../assets/images/weight2.jpg";
+---
+
+
+
+
+
+<section>
+    <div class="grid grid-cols-6 grid-rows-3 gap-xs px-2xl my-xl">
+        
+        <div class="col-span-2 row-span-1">
+            <Image src={weight2} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+
+        <div class="col-span-3 row-span-2">
+            <Image src={weight1} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+        
+        <div class="col-span-1 row-span-2">
+            <Image src={long1} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+
+        <div class="col-span-1 row-span-2">
+            <Image src={long2} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+
+        <div class="col-span-1 row-span-1">
+            <Image src={square3} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+        
+        <div class="col-span-2 row-span-1 bg-[#E9C5B2] text-white flex text-center rounded-xl p-6">
+          <div>
+            <h3 class="text-xl italic">Har du spørgsmål?</h3>
+            <p class="text-sm mt-1">Er du altid velkommen til at sende os en mail med dine spørgsmål.</p>
+        </div>
+        </div>
+
+        <div class="col-span-1 row-span-1">
+            <Image src={square2} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+
+        <div class="col-span-1 row-span-1">
+            <Image src={square1} alt="billed" class="w-full h-full object-cover rounded-sm" />
+        </div>
+
+        <div class="col-span-1 row-span-1 bg-[#A89387] text-white flex items-center justify-center text-center rounded-xl p-6">
+    <div>
+      <h3 class="text-2xl sm:text-3xl font-semibold">Bryllup</h3>
+      <p class="mt-2">Find alt hvad du skal bruge til den største fest i dit liv</p>
+    </div>
+  </div>
+    </div>
+</section>
+

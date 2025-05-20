@@ -3,22 +3,38 @@ import { Image } from "astro:assets";
 import boheme from "../assets/images/boheme_fg.jpg";
 ---
 
-<section class="sm:px-2xl px-s">
-  <div>
-    <h3>Stort <i>tillykke</i></h3>
-    <h5>- når I kigger forbi hos INK Saloon, er I helt sikkert igang med at planlægge en festlig begivenhed. Vi er så glade for, at I er her – vi glæder os til at designe unikke invitationer og smuk pynt til netop jeres fest.</h5>
-    <div class="grid sm:grid-cols-5 gap-4 items-start pt-m">
-      <div class="col-span-3 pr-m">
-        <p>
-          Hos INK Saloon designer vi eksklusive invitationer og papirvarer til livets fester – bryllup, barnedåb, konfirmation, fødselsdag og meget mere. <br />
-          <br /> Med over 13 års erfaring og 15.000 fester bag os, er vi blandt Danmarks førende designstudios inden for personlige invitationer og matchende festpynt. Vælg mellem unikke designs, som I selv tilpasser med tekst, fotos og detaljer direkte på vores hjemmeside. <br />
-          <br /> Vi bruger nøje udvalgte papirkvaliteter og samarbejder med de bedste trykkerier for at sikre et elegant udtryk – fra bordkort og menukort til takkekort og velkomstskilte. <br />
-          <br /> Hos os får I moderne, tidsløst design og en rød tråd til jeres store dag – skabt med passion, præcision og sans for detalje
+<section class="px-s sm:px-2xl py-xl bg-white text-brun-800">
+  <div class="max-w-screen-xl mx-auto">
+    <!-- Overskrifter -->
+    <div class="mb-8">
+      <h3 class="text-4xl sm:text-5xl">
+        Stort <i class="italic font-normal">tillykke</i>
+      </h3>
+      <h5 class="mt-2 text-lg font-light leading-relaxed text-brun-600">
+        – når I kigger forbi hos INK Saloon, er I helt sikkert i gang med at planlægge en festlig begivenhed. Vi er så glade for, at I er her – vi glæder os til at designe unikke invitationer og smuk pynt til netop jeres fest.
+      </h5>
+    </div>
+
+    <!-- Indhold: tekst og billede -->
+    <div class="grid sm:grid-cols-5 gap-8 items-start">
+      <!-- Tekstkolonne -->
+      <div class="sm:col-span-3">
+        <p class="text-base leading-relaxed pr-lg">
+          Hos INK Saloon designer vi eksklusive invitationer og papirvarer til livets fester – bryllup, barnedåb, konfirmation, fødselsdag og meget mere.
+          <br /><br />
+          Med over 13 års erfaring og 15.000 fester bag os, er vi blandt Danmarks førende designstudios inden for personlige invitationer og matchende festpynt. Vælg mellem unikke designs, som I selv tilpasser med tekst, fotos og detaljer direkte på vores hjemmeside.
+          <br /><br />
+          Vi bruger nøje udvalgte papirkvaliteter og samarbejder med de bedste trykkerier for at sikre et elegant udtryk – fra bordkort og menukort til takkekort og velkomstskilte.
+          <br /><br />
+          Hos os får I moderne, tidsløst design og en rød tråd til jeres store dag – skabt med passion, præcision og sans for detalje.
         </p>
       </div>
-      <div class="col-span-2 sticky top-10 self-start">
-        <Image src={boheme} class="w-8xl h-auto object-cover" alt="hej" />
+
+      <!-- Billedekolonne -->
+      <div class="sm:col-span-2 sticky top-10 self-start">
+        <Image src={boheme} alt="Invitation design eksempel" class="w-full h-auto shadow-md object-cover" />
       </div>
     </div>
   </div>
 </section>
+ 
