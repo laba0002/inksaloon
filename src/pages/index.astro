@@ -14,19 +14,7 @@ import Karrusel from "../components/Karrusel.astro";
 ---
 
 <MainLayout title="Forside">
-  <section class="relative h-[600px]">
-    <!-- VIDEO baggrund -->
-    <div class="absolute inset-0 w-full h-full -z-10 overflow-hidden">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover">
-        <source src="/herovideo.mp4" type="video/mp4" />
-      </video>
-    </div>
 
-    <!-- TEKST / INDHOLD OVENPÅ VIDEO -->
-    <div class="relative z-20 flex items-center justify-center h-full">
-      <h1 class="text-white text-4xl">ink <i>saloon</i></h1>
-    </div>
-  </section>
 
   <Karrusel />
   <Cards />
