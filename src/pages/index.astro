@@ -71,9 +71,16 @@ import FakeNav from "../components/FakeNav.astro";
           habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
           adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
         </p>
-        <div class="mt-m text-hvidgul-50">
-          <Knap text="Læs mere" />
-        </div>
+     <div class="hidden md:block mt-xl">
+          <Button  variant="tertiary" size="medium" href="/produktliste" >
+            Læs mere
+        </Button>
+     </div>
+     <div class="block md:hidden mt-lg">
+          <Button  variant="tertiary" size="small" href="/produktliste" >
+            Læs mere
+      </Button>
+     </div>
       </div>
       
       <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
