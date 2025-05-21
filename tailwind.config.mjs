@@ -119,12 +119,6 @@ export default {
     4: "4px",
   },
 
-  /* Box shadows herunder */
-  boxShadow: {
-    boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 16px -162px 45px 0px rgba(113, 100, 71, 0.00), 11px -103px 42px 0px rgba(113, 100, 71, 0.01), 6px -58px 35px 0px rgba(113, 100, 71, 0.05), 3px -26px 26px 0px rgba(113, 100, 71, 0.09), 1px -6px 14px 0px rgba(113, 100, 71, 0.10)",
-    filterShadow: " 0px -278px 78px 0px rgba(119, 106, 99, 0.00), 0px -178px 71px 0px rgba(119, 106, 99, 0.01), 0px -100px 60px 0px rgba(119, 106, 99, 0.05), 0px -45px 45px 0px rgba(119, 106, 99, 0.09), 0px -11px 24px 0px rgba(119, 106, 99, 0.10)",
-  },
-
   extend: {
     /* Border radius størrelser herunder */
     borderRadius: {
@@ -134,6 +128,12 @@ export default {
       m: "60px",
       lg: "70px",
       xl: "80px",
+    },
+    /* Box shadows herunder */
+    boxShadow: {
+      box: "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 16px -162px 45px 0px rgba(113, 100, 71, 0.00), 11px -103px 42px 0px rgba(113, 100, 71, 0.01), 6px -58px 35px 0px rgba(113, 100, 71, 0.05), 3px -26px 26px 0px rgba(113, 100, 71, 0.09), 1px -6px 14px 0px rgba(113, 100, 71, 0.10)",
+      filter: " 0px -278px 78px 0px rgba(119, 106, 99, 0.00), 0px -178px 71px 0px rgba(119, 106, 99, 0.01), 0px -100px 60px 0px rgba(119, 106, 99, 0.05), 0px -45px 45px 0px rgba(119, 106, 99, 0.09), 0px -11px 24px 0px rgba(119, 106, 99, 0.10)",
+      card: "0px 70px 20px 0px rgba(188, 184, 174, 0.00), 0px 45px 18px 0px rgba(188, 184, 174, 0.01), 0px 25px 15px 0px rgba(188, 184, 174, 0.05), 0px 11px 11px 0px rgba(188, 184, 174, 0.09), 0px 3px 6px 0px rgba(188, 184, 174, 0.10)",
     },
   },
 
