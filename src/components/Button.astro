@@ -2,7 +2,7 @@
 
 const {variant="primary", size="medium"} = Astro.props;
 
-const buttonStyling = "font-bold px-16 py-2  transition hover:italic";
+const buttonStyling = " py-xxs transition hover:italic";
 
 const variantClasses = {
     "primary": "bg-orange-500  text-hvidgul-100 hover:text-hvidgul-400",
@@ -11,9 +11,9 @@ const variantClasses = {
 };
 
 const sizeClasses = {
-    "small": "p-2 text-konsultativDesk",      
-    "medium": "p-4 font-semibold px-14 text-baseDesk", 
-    "large": "px-[30px] py-[20px] text-3xl"       
+    "small": "px-s  text-konsultativDesk",      
+    "medium": "px-ml   px-14 text-baseDesk", 
+    "large": "px-lg  text-3xl"       
 };
 
 ---
