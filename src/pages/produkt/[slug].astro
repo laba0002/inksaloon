@@ -2,7 +2,7 @@
 //ts-nocheck
 import ListeLayout from "../../layouts/ListeLayout.astro";
 import Trestep from "../../components/Trestep.astro";
-import FakeNav from "../components/FakeNav.astro";
+import FakeNav from "../../components/FakeNav.astro";
 import { apiDetails } from "../../settings";
 export async function getStaticPaths() {
   const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
