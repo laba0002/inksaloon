@@ -1,6 +1,6 @@
 ---
 //ts-nocheck
-import MainLayout from "../../layouts/MainLayout.astro";
+import ListeLayout from "../../layouts/ListeLayout.astro";
 import Trestep from "../../components/Trestep.astro";
 import { apiDetails } from "../../settings";
 export async function getStaticPaths() {
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const { myProduct } = Astro.props;
 ---
 
-<MainLayout> 
+<ListeLayout> 
 
 <section class=" grid grid-cols-2 mx-auto">
     <img class="w-[600px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
@@ -40,4 +40,4 @@ const { myProduct } = Astro.props;
 
 
 <Trestep />
-</MainLayout>
+</ListeLayout>
