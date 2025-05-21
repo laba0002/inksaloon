@@ -18,9 +18,11 @@ import invi2 from "../assets/images/invi_2.jpg";
 import invi3 from "../assets/images/invi_3.jpg";
 import invi4 from "../assets/images/invi_4.jpg";
 import invi5 from "../assets/images/invi_5.jpg";
+import FakeNav from "../components/FakeNav.astro";
 ---
 
 <MainLayout title="Forside">
+  <div class="stickynav"> <FakeNav /></div>
 
 <section class="my-xl">
   <Typewrite />
@@ -84,3 +86,12 @@ import invi5 from "../assets/images/invi_5.jpg";
 
 
 </style> -->
+
+<style>
+
+  .stickynav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+</style>
