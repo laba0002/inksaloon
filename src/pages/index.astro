@@ -6,6 +6,7 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Bento from "../components/Bento.astro";
+import Knap from "../components/Knap.astro";
 import Instagram from "../components/Instagram.astro";
 import Trestep from "../components/Trestep.astro";
 import Tillykke from "../components/Tillykke.astro";
@@ -18,6 +19,11 @@ import invi2 from "../assets/images/invi_2.jpg";
 import invi3 from "../assets/images/invi_3.jpg";
 import invi4 from "../assets/images/invi_4.jpg";
 import invi5 from "../assets/images/invi_5.jpg";
+import alttilbordet from "../assets/images/alttilbordet.jpg";
+import bohemepic from "../assets/images/bohemepic.jpg";
+import vandmaling from "../assets/images/vandmaling.jpg";
+import format from "../assets/images/format.jpg";
+
 ---
 
 <MainLayout title="Forside">
@@ -47,6 +53,49 @@ import invi5 from "../assets/images/invi_5.jpg";
  
   <Cards />
   <Trestep />
+<section class="my-xl px-4 md:px-0">
+  <div class="relative w-full h-[650px] flex items-center overflow-hidden">
+   
+    <Image
+      src={format}
+      alt="baggrund"
+      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"
+    />
+
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+
+    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
+      
+      
+      <div class="flex-1 px-0 md:pl-xl ">
+        <h4 class="text-2xl md:text-4xl text-hvidgul-50">
+          Format<i>sammensætning</i>
+        </h4>
+        <p class="text-hvidgul-50 mt-4 text-sm md:text-base max-w-full md:max-w-[600px]">
+          Lorem ipsum dolor sit amet consectetur. Vestibulum adipiscing rhoncus facilisi eget non mauris vulputate. 
+          Maecenas pretium facilisis faucibus tincidunt sit malesuada facilisi metus. Aliquam est enim lacus id purus 
+          habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
+          adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
+        </p>
+        <div class="mt-m text-hvidgul-50">
+          <Knap text="Læs mere" />
+        </div>
+      </div>
+
+      
+      <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
+        <Image
+          src={format}
+          alt="Invitation 2"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <Instagram />
 
   <div class="flex flex-wrap justify-center gap-m bg-[url('/bg_review.jpg')] bg-cover p-lg">
@@ -57,6 +106,7 @@ import invi5 from "../assets/images/invi_5.jpg";
   </div>
 
   <Tillykke />
+
 
   
 </MainLayout>

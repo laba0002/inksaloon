@@ -1,0 +1,12 @@
+---
+// Props
+const { text = "Klik her", onClick = null } = Astro.props;
+---
+
+<button class="border-2 py-xxs px-ml"
+  type="button"
+  on:click={onClick}
+  class="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+>
+  {text}
+</button>
