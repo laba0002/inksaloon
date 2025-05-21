@@ -5,9 +5,11 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Accordion from "../components/Accordion.astro";
 import Bento from "../components/Bento.astro";
+import FakeNav from "../components/FakeNav.astro";
 ---
 
 <ListeLayout>
+    <div class="stickynav"> <FakeNav /></div>
 <section  class="w-9xl md:w-[800px] mx-auto">
     <Accordion title="Hvordan gør man?" >
         <h6> Step 1: Vælg design</h6>
@@ -243,3 +245,14 @@ import Bento from "../components/Bento.astro";
 </section>
 <Bento />
 </ListeLayout>
+
+
+
+<style>
+
+    .stickynav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+  </style>

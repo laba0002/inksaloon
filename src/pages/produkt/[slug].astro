@@ -1,7 +1,8 @@
 ---
 //ts-nocheck
-import MainLayout from "../../layouts/MainLayout.astro";
+import ListeLayout from "../../layouts/ListeLayout.astro";
 import Trestep from "../../components/Trestep.astro";
+import FakeNav from "../components/FakeNav.astro";
 import { apiDetails } from "../../settings";
 export async function getStaticPaths() {
   const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
@@ -23,7 +24,8 @@ export async function getStaticPaths() {
 const { myProduct } = Astro.props;
 ---
 
-<MainLayout> 
+<ListeLayout> 
+  <div class="stickynav"> <FakeNav /></div>
 
 <section class=" grid grid-cols-2 mx-auto">
     <img class="w-[600px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
@@ -40,4 +42,14 @@ const { myProduct } = Astro.props;
 
 
 <Trestep />
-</MainLayout>
+</ListeLayout>
+
+
+<style>
+
+  .stickynav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+</style>
