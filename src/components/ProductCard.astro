@@ -1,5 +1,6 @@
 ---
 const { product } = Astro.props;
+import Heart from "./Heart.astro";
 ---
 
 <article class="w-[200px] md:w-[300px] mb-xs">
@@ -8,7 +9,10 @@ const { product } = Astro.props;
             <img src={`/images/${product.image_filename}`} alt={product.name} class="object-cover transition-all ease-in hover:scale-110" />
         </div>   
     </a>
-<h6 class="font-light">{product.name}</h6>
+<div class="flex flex-row justify-between items-center mt-xxs">
+    <h6 class="font-light">{product.name}</h6>
+    <Heart></Heart>
+</div>
 <p class="italic font-light">{product.kategori}</p>
   </article>
   
