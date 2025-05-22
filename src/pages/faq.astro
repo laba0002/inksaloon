@@ -1,5 +1,5 @@
 ---
-import ListeLayout from "../layouts/ListeLayout.astro";
+import FaqLayout from "../layouts/FaqLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
@@ -8,9 +8,11 @@ import Bento from "../components/Bento.astro";
 import FakeNav from "../components/FakeNav.astro";
 ---
 
-<ListeLayout>
+<FaqLayout>
     <div class="stickynav"> <FakeNav /></div>
-<section  class="w-9xl md:w-[800px] mx-auto">
+    
+<section  class="w-9xl md:w-[800px] mx-auto my-xl">
+    <h1 class="">FAQ</h1>
     <Accordion title="Hvordan gør man?" >
         <h6> Step 1: Vælg design</h6>
         <p>Vælg en anledning og dit foretrukne design - klassisk eller moderne. Du vælger selv, om det skal printes, sendes digitalt eller printes hjemme. Pris vises på produktsiden.</p>
@@ -244,7 +246,7 @@ import FakeNav from "../components/FakeNav.astro";
     </Accordion>
 </section>
 <Bento />
-</ListeLayout>
+</FaqLayout>
 
 
 
