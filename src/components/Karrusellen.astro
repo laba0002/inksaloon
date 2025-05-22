@@ -1,0 +1,195 @@
+---
+import { Image } from "astro:assets";
+import format from "../assets/images/format.jpg";
+import altilbordet from "../assets/images/altilbordet.jpg";
+import boheme from "../assets/images/bohemepic.jpg";
+import vandmaling from "../assets/images/vandmaling.jpg";
+
+import Button from "../components/Button.astro";
+---
+
+<div class="carousel w-full overflow-x-auto snap-x snap-mandatory flex scroll-smooth">
+  <!-- Slide 1 -->
+  <div id="slide1" class="carousel-item relative w-full flex-shrink-0 snap-center">
+<div class="my-xl">
+  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
+    <Image
+      src={format}
+      alt="baggrund"
+      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
+      <div class="flex-1 px-0 md:pl-xl px-ml">
+        <h4 class=" text-hvidgul-50">
+          Format<i>sammensætning</i>
+        </h4>
+        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
+          Lorem ipsum dolor sit amet consectetur. Vestibulum adipiscing rhoncus facilisi eget non mauris vulputate. 
+          Maecenas pretium facilisis faucibus tincidunt sit malesuada facilisi metus. Aliquam est enim lacus id purus 
+          habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
+          adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
+        </p>
+     <div class="hidden md:block mt-xl">
+          <Button  variant="tertiary" size="medium" href="/produktliste" >
+            Læs mere
+        </Button>
+     </div>
+     <div class="block md:hidden mt-lg">
+          <Button  variant="tertiary" size="small" href="/produktliste" >
+            Læs mere
+      </Button>
+     </div>
+      </div>
+      <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
+        <Image
+          src={format}
+          alt="Invitation 2"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
+      <a href="#slide4" class="btn btn-circle text-hvidgul-50">❮</a>
+      <a href="#slide2" class="btn btn-circle text-hvidgul-50">❯</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div id="slide2" class="carousel-item relative w-full flex-shrink-0 snap-center">
+<div class="my-xl px-4 md:px-0">
+  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
+    <Image
+      src={altilbordet}
+      alt="baggrund"
+      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
+    <div class="absolute inset-0 bg-opacity-40 z-10"></div>
+    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
+      <div class="flex-1 px-0 md:pl-xl px-ml ">
+        <h4 class=" text-hvidgul-50">
+          Alt <i>til bordet</i>
+        </h4>
+        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
+          Lorem ipsum dolor sit amet consectetur. Vestibulum adipiscing rhoncus facilisi eget non mauris vulputate. 
+          Maecenas pretium facilisis faucibus tincidunt sit malesuada facilisi metus. Aliquam est enim lacus id purus 
+          habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
+          adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
+        </p>
+     <div class="hidden md:block mt-xl">
+          <Button  variant="tertiary" size="medium" href="/produktliste" >
+            Læs mere
+        </Button>
+     </div>
+     <div class="block md:hidden mt-lg">
+          <Button  variant="tertiary" size="small" href="/produktliste" >
+            Læs mere
+      </Button>
+     </div>
+      </div>
+      <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
+        <Image
+          src={altilbordet}
+          alt="Invitation 2"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
+      <a href="#slide1" class="btn btn-circle text-hvidgul-50">❮</a>
+      <a href="#slide3" class="btn btn-circle text-hvidgul-50">❯</a>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div id="slide3" class="carousel-item relative w-full flex-shrink-0 snap-center">
+<div class="my-xl px-4 md:px-0">
+  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
+    <Image
+      src={boheme}
+      alt="baggrund"
+      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
+    <div class="absolute inset-0 bg-opacity-40 z-10"></div>
+    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
+      <div class="flex-1 px-0 md:pl-xl px-ml ">
+        <h4 class=" text-hvidgul-50">
+          <i>Boheme</i>
+        </h4>
+        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
+          Lorem ipsum dolor sit amet consectetur. Vestibulum adipiscing rhoncus facilisi eget non mauris vulputate. 
+          Maecenas pretium facilisis faucibus tincidunt sit malesuada facilisi metus. Aliquam est enim lacus id purus 
+          habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
+          adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
+        </p>
+     <div class="hidden md:block mt-xl">
+          <Button  variant="tertiary" size="medium" href="/produktliste" >
+            Læs mere
+        </Button>
+     </div>
+     <div class="block md:hidden mt-lg">
+          <Button  variant="tertiary" size="small" href="/produktliste" >
+            Læs mere
+      </Button>
+     </div>
+      </div>
+      <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
+        <Image
+          src={boheme}
+          alt="Invitation 2"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
+      <a href="#slide2" class="btn btn-circle text-hvidgul-50">❮</a>
+      <a href="#slide4" class="btn btn-circle text-hvidgul-50">❯</a>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div id="slide4" class="carousel-item relative w-full flex-shrink-0 snap-center">
+<div class="my-xl px-4 md:px-0">
+  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
+    <Image
+      src={vandmaling}
+      alt="baggrund"
+      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
+    <div class="absolute inset-0 bg-opacity-40 z-10"></div>
+    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
+      <div class="flex-1 px-0 md:pl-xl px-ml ">
+        <h4 class=" text-hvidgul-50">
+          Akvarel<i>maling</i>
+        </h4>
+        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
+          Lorem ipsum dolor sit amet consectetur. Vestibulum adipiscing rhoncus facilisi eget non mauris vulputate. 
+          Maecenas pretium facilisis faucibus tincidunt sit malesuada facilisi metus. Aliquam est enim lacus id purus 
+          habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
+          adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
+        </p>
+     <div class="hidden md:block mt-xl">
+          <Button  variant="tertiary" size="medium" href="/produktliste" >
+            Læs mere
+        </Button>
+     </div>
+     <div class="block md:hidden mt-lg">
+          <Button  variant="tertiary" size="small" href="/produktliste" >
+            Læs mere
+      </Button>
+     </div>
+      </div>
+      <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
+        <Image
+          src={vandmaling}
+          alt="Invitation 2"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
+      <a href="#slide3" class="btn btn-circle text-hvidgul-50">❮</a>
+      <a href="#slide1" class="btn btn-circle text-hvidgul-50">❯</a>
+    </div>
+  </div>
+</div>
