@@ -6,6 +6,7 @@ import FakeNav from "../../components/FakeNav.astro";
 import { apiDetails } from "../../settings";
 import Accordion from "../../components/Accordion.astro";
 import Button from "../../components/Button.astro";
+import Heart from "../../components/Heart.astro";
 export async function getStaticPaths() {
   const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
     headers: {
@@ -32,7 +33,10 @@ const { myProduct } = Astro.props;
 <section class="grid grid-cols-1 md:grid-cols-2 content-around gap-sm mx-s md:mx-xl mt-ml">
     <img class=" w-9xl md:w-[550px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
  <div>   
-  <h3 class="text-brun-700"> {myProduct.name}</h3>
+<div class="flex flex-row justify-between items-center mr-sm md:mr-xl mb-s">  
+  <h4 class="text-brun-700"> {myProduct.name}</h4>
+  <Heart />
+</div>
  <div class="text-brun-800">
     <p>Designet af Ink Saloon Studios</hp>
     <h6>Format: 120 x 170 mm</h6>
