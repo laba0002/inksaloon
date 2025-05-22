@@ -20,7 +20,11 @@ import invi3 from "../assets/images/invi_3.jpg";
 import invi4 from "../assets/images/invi_4.jpg";
 import invi5 from "../assets/images/invi_5.jpg";
 import format from "../assets/images/format.jpg";
+import altilbordet from "../assets/images/altilbordet.jpg";
+import boheme from "../assets/images/bohemepic.jpg";
+import vandmaling from "../assets/images/vandmaling.jpg";
 import FakeNav from "../components/FakeNav.astro";
+import Karrusellen from "../components/Karrusellen.astro";
 ---
 
 <MainLayout title="Forside">
@@ -51,49 +55,8 @@ import FakeNav from "../components/FakeNav.astro";
  
   <Cards />
   <Trestep />
-<section class="my-xl px-4 md:px-0">
-  <div class="relative w-full h-[650px] flex items-center overflow-hidden">
-   
-    <Image
-      src={format}
-      alt="baggrund"
-      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
 
-    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
-      <div class="flex-1 px-0 md:pl-xl ">
-        <h4 class="text-2xl md:text-4xl text-hvidgul-50">
-          Format<i>sammensætning</i>
-        </h4>
-        <p class="text-hvidgul-50 mt-4 text-sm md:text-base max-w-full md:max-w-[600px]">
-          Lorem ipsum dolor sit amet consectetur. Vestibulum adipiscing rhoncus facilisi eget non mauris vulputate. 
-          Maecenas pretium facilisis faucibus tincidunt sit malesuada facilisi metus. Aliquam est enim lacus id purus 
-          habitasse mollis aliquet. Rutrum tincidunt consectetur urna pulvinar egestas. Ultrices ut orci magna nulla 
-          adipiscing bibendum. Quis id aliquet velit semper ut porta scelerisque.
-        </p>
-     <div class="hidden md:block mt-xl">
-          <Button  variant="tertiary" size="medium" href="/produktliste" >
-            Læs mere
-        </Button>
-     </div>
-     <div class="block md:hidden mt-lg">
-          <Button  variant="tertiary" size="small" href="/produktliste" >
-            Læs mere
-      </Button>
-     </div>
-      </div>
-      
-      <div class="hidden md:block w-[550px] h-[450px] flex-shrink-0 overflow-hidden pr-xl">
-        <Image
-          src={format}
-          alt="Invitation 2"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
+<Karrusellen />
 
   <Instagram />
 
