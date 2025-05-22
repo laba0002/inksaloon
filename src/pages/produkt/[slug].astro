@@ -4,6 +4,9 @@ import ListeLayout from "../../layouts/ListeLayout.astro";
 import Trestep from "../../components/Trestep.astro";
 import FakeNav from "../../components/FakeNav.astro";
 import { apiDetails } from "../../settings";
+import Accordion from "../../components/Accordion.astro";
+import Button from "../../components/Button.astro";
+import Heart from "../../components/Heart.astro";
 export async function getStaticPaths() {
   const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
     headers: {
@@ -27,14 +30,66 @@ const { myProduct } = Astro.props;
 <ListeLayout> 
   <div class="stickynav"> <FakeNav /></div>
 
-<section class=" grid grid-cols-2 mx-auto">
-    <img class="w-[600px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
+<section class="grid grid-cols-1 md:grid-cols-2 content-around gap-sm mx-s md:mx-xl mt-ml">
+    <img class=" w-9xl md:w-[550px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
  <div>   
-  <h3> {myProduct.name}</h3>
- <div>
-    <h6>Designet af Ink Saloon Studios</h6>
+<div class="flex flex-row justify-between items-center mr-sm md:mr-xl mb-s">  
+  <h4 class="text-brun-700"> {myProduct.name}</h4>
+  <Heart />
+</div>
+ <div class="text-brun-800">
+    <p>Designet af Ink Saloon Studios</hp>
     <h6>Format: 120 x 170 mm</h6>
     <h6>Fra 30 DKK/stk</h6>
+  </div>
+  <div class="flex flex-row justify-between mr-sm md:mr-xl  my-sm">
+    <Button  variant="primary" size="large" href="#" >
+      <i>Personliggør</i> din invitation
+  </Button>
+  <Button  variant="secondary" size="large" href="#" >
+    Antal 
+</Button> 
+</div>
+
+
+<div class=" mr-sm md:mr-xl">
+  
+  <Accordion title="Beskrivelse" class="mt-ml">
+    <p>{myProduct.description}</p>
+  </Accordion>
+  <Accordion title="Med i købet" class="mt-ml">
+    <ul class="list-disc pl-s">
+      <li>
+        Kort trykt på struktureret papir, 300 g., let knækket hvid. 
+      </li>
+      <li>
+        Kuverter i knækket hvid. Farvede kuverter kan tilkøbes her
+      </li>
+      <li>
+        Alt tekst og fotos kan personliggøres via editor i Corjl 
+      </li>
+      <li>
+        En grafiker tjekker layout igennem inden tryk
+      </li>
+      <li>
+        Levering inden for få hverdage. Mulighed for express tryk.
+      </li>
+    </ul>
+  </Accordion>
+  <Accordion title="Print selv" class="mt-ml">
+  <p>
+      Du modtager efter afsluttet ordre en mail med en trykklar fil af designet som du selv kan printe. Bemærk kvaliteten bliver ikke så god som ved tryk hos trykkeri og kuverter er ekskl. Alt tekst og fotos kan personliggøres.
+    
+  </p></Accordion>
+  <Accordion title="Om Ink Saloon" class="mt-ml">
+    <p>
+      Hos INK Saloon designer vi eksklusive invitationer og papirvarer til livets fester – bryllup, barnedåb, konfirmation, fødselsdag og meget mere.
+    </p>
+    <p>
+      Med over 13 års erfaring og 15.000 fester bag os, er vi blandt Danmarks førende designstudios inden for personlige invitationer og matchende festpynt. Vælg mellem unikke designs, som I selv tilpasser med tekst, fotos og detaljer direkte på vores hjemmeside.
+    </p>
+    </Accordion>
+</div>
  </div>
 
 <!-- indsæt knapper & accordion -->

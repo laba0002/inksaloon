@@ -1,12 +1,18 @@
 ---
 const { product } = Astro.props;
+import Heart from "./Heart.astro";
 ---
 
-<article class="w-[200px] md:w-[300px]">
+<article class="w-[200px] md:w-[300px] mb-xs">
     <a href={`/produkt/${product.slug}`}>
-        <img src={`/images/${product.image_filename}`} alt={product.name} />
+        <div class="w-[200px] md:w-[300px] overflow-hidden">
+            <img src={`/images/${product.image_filename}`} alt={product.name} class="object-cover transition-all ease-in hover:scale-110" />
+        </div>   
     </a>
+<div class="flex flex-row justify-between items-center mt-xxs">
     <h6 class="font-light">{product.name}</h6>
-    <p class="italic font-light">{product.kategori}</p>
+    <Heart></Heart>
+</div>
+<p class="italic font-light">{product.kategori}</p>
   </article>
   
