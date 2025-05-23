@@ -1,25 +1,26 @@
 ---
 import { Image } from "astro:assets";
 import boheme from "../assets/images/boheme_fg.jpg";
+import tillykke from "../assets/images/tillykke_pic.jpg";
 ---
 
 <section class="px-s sm:px-2xl py-xl  text-brun-800">
   <div class="max-w-screen-xl mx-auto">
     <!-- Overskrifter -->
-    <div class="mb-8">
+    <div class="my-s">
       <h3 class="text-4xl sm:text-5xl">
         Stort <i class="italic font-normal">tillykke</i>
       </h3>
-      <h5 class="mt-2 text-lg font-light leading-relaxed text-brun-600">
+      <h5 class="mt-2 text-lg font-light leading-relaxed ">
         – når I kigger forbi hos INK Saloon, er I helt sikkert i gang med at planlægge en festlig begivenhed. Vi er så glade for, at I er her – vi glæder os til at designe unikke invitationer og smuk pynt til netop jeres fest.
       </h5>
     </div>
 
     <!-- Indhold: tekst og billede -->
-    <div class="grid sm:grid-cols-5 gap-8 items-start">
+    <div class="grid sm:grid-cols-5 gap-xs sm:mt-s items-start">
       <!-- Tekstkolonne -->
       <div class="sm:col-span-3">
-        <p class="text-base leading-relaxed pr-lg">
+        <p class="text-base leading-relaxed sm:pr-lg sm:pt-none pt-s">
           Hos INK Saloon designer vi eksklusive invitationer og papirvarer til livets fester – bryllup, barnedåb, konfirmation, fødselsdag og meget mere.
           <br /><br />
           Med over 13 års erfaring og 15.000 fester bag os, er vi blandt Danmarks førende designstudios inden for personlige invitationer og matchende festpynt. Vælg mellem unikke designs, som I selv tilpasser med tekst, fotos og detaljer direkte på vores hjemmeside.
@@ -31,8 +32,8 @@ import boheme from "../assets/images/boheme_fg.jpg";
       </div>
 
       <!-- Billedekolonne -->
-      <div class="sm:col-span-2 sticky top-10 self-start">
-        <Image src={boheme} alt="Invitation design eksempel" class="w-full h-auto  object-cover" />
+      <div class="sm:col-span-2 sticky top-10 self-start sm:pt-none pt-sm hidden md:block drop-shadow-2xl">
+        <Image src={tillykke} alt="Invitation design eksempel" class="w-full h-auto  object-cover" />
       </div>
     </div>
   </div>
