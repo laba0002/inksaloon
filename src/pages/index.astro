@@ -5,13 +5,15 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
-import Bento from "../components/Bento.astro";
 import Knap from "../components/Knap.astro";
 import Instagram from "../components/Instagram.astro";
 import Trestep from "../components/Trestep.astro";
 import Tillykke from "../components/Tillykke.astro";
 import Review from "../components/Review.astro";
-import Cards from "../components/Cards.astro";
+import bryllup from "../assets/images/bryllup_card.jpg";
+import konfirmation from "../assets/images/konfirmation_card.jpg";
+import barnedaab from "../assets/images/barnedaab_card.jpg";
+import fodselsdag from "../assets/images/fodselsdag_card.jpg";
 import Karrusel from "../components/Karrusel.astro";
 import Typewrite from "../components/Typewrite.astro";
 import invi1 from "../assets/images/invi_1.jpg";
@@ -30,7 +32,7 @@ import Karrusellen from "../components/Karrusellen.astro";
 <MainLayout title="Forside">
   <div class="stickynav"> <FakeNav /></div>
 
-<section class="my-xl">
+<section class="sm:my-xl my-m">
   <Typewrite />
   <div class="flex flex-row justify-center items-center mx-sm md:mx-ml mt-ml md:mt-2xl ">
     <div class="w-7xl shadow-card transition-transform  duration-300 ease-in hover:-rotate-6  hover:scale-110 hover:z-50">   
@@ -52,15 +54,48 @@ import Karrusellen from "../components/Karrusellen.astro";
 </section>
 
  
- 
-  <Cards />
+ <!-- De 4 cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 sm:px-2xl px-s sm:gap-s gap-xxs lg:grid-cols-4 my-3xl">
+  <!-- Bryllup -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={bryllup} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Bryllup" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Bryllup</i></h6>
+    </div>
+  </div>
+
+  <!-- Konfirmation -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={konfirmation} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Konfirmation" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Konfirmation</i></h6>
+    </div>
+  </div>
+
+  <!-- Barnedåb -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={barnedaab} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Barnedåb" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Barnedåb</i></h6>
+    </div>
+  </div>
+
+  <!-- Fødselsdag -->
+  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+    <Image src={fodselsdag} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Fødselsdag" />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Fødselsdag</i></h6>
+    </div>
+  </div>
+</div>
+
   <Trestep />
 
 <Karrusellen />
 
   <Instagram />
 
-  <div class="flex flex-wrap justify-center gap-m bg-[url('/bg_review.jpg')] bg-cover p-lg">
+  <div class="flex flex-wrap justify-center gap-m bg-[url('/bg_review.jpg')] bg-cover p-lg my-xl">
     <Review text="“Har netop modtaget vores konfirmationsinvitationer. Smukkeste indpakning og flotteste invitationer i den lækreste kvalitet. Kan ikke vente med  at sende dem ud.”" name="Gavin J." />
     <Review text="“Meget positivt overrasket over kvalitet og brugeroplevelse, da vi modtog vores varer. Lækker indpakning.”" name="Poul B." />
     <Review text="“Ville god service! Vi fik lavet vores invitationer af Emilie og hendes kollega gennem mail, og invitationerne blev præcis som vi ønskede. Der var hurtig levering både da vi modtog nogle forkerte invitationer og da de sendte de rigtige!”" name="Tine H." />
