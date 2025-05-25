@@ -136,12 +136,12 @@
       </div>
     </div>
   </div>
-  <nav id="mobilmenu" class="flex flex-col content-center relative w-screen top-0 z-50" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-    <ul class="bg-hvidgul-500 gap-s flex flex-col text-brun-600">
+  <nav id="mobilmenu" class="md:hidden fixed flex flex-col content-center relative w-screen top-0 z-50" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="bg-hvidgul-500 gap-s flex flex-col py-sm  text-brun-600 shadow-lg">
       <li class="relative group">
-        <a href="#" class="hover:underline"><h6>Konfirmation</h6></a>
+        <a href="#" class="hover:underline "><h6 class="pl-sm">Barnedåb</h6></a>
         <!-- Dropdown -->
-        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-4xl py-lg bg-hvidgul-500 shadow-lg z-50">
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
           <!-- Før festen -->
           <div>
             <h6 class="italic mb-2 text-lg">Før festen</h6>
@@ -174,9 +174,151 @@
           </div>
         </div>
       </li>
-      <li class="text-center"><a href="/omos" class="transition"><h6>Om os</h6></a></li>
-      <li class="text-center"><a href="/kontakt" class="transition"><h6>Kontakt</h6></a></li>
-      <li class="text-center"><a href="/faq" class="transition"><h6>FAQ</h6></a></li>
+      <li class="relative group">
+        <a href="#" class="hover:underline "><h6 class="pl-sm">Konfirmation</h6></a>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <a href="#" class="hover:underline "><h6 class="pl-sm">Bryllup</h6></a>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <a href="#" class="hover:underline "><h6 class="pl-sm">Fester</h6></a>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <a href="#" class="hover:underline "><h6 class="pl-sm">Fødselsdag</h6></a>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="/faq"><h6 class="pl-sm">FAQ</h6></a></li>
     </ul>
   </nav>
 </div>
