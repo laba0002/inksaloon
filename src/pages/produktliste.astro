@@ -25,7 +25,7 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
 <ListeLayout title="Bryllup">
   <div class="stickynav"> <FakeNav /></div>
   <section x-data="{ showmenu: false }">
-    <h1 class="text-brun-600 m-s mx-ml md:mx-xl">Bryllup</h1>
+    <h1 class="text-brun-600  mx-sm md:mx-xl">Bryllup</h1>
     
     <!-- Filterknap -->
     <div id="filterknap" class="top-s pl-sm md:pl-xl z-50 w-m" x-on:click="showmenu = true">
@@ -101,7 +101,7 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
     </div>
 
     <!-- Produktliste -->
-    <div class="flex flex-wrap gap-xxs md:gap-s m-xs md:m-xl justify-normal" id="product-list">
+    <div class="flex flex-wrap gap-xxs md:gap-s m-xs md:m-xl justify-evenly md:justify-normal" id="product-list">
       {data.map((product) => (
         <div
           class="product-wrapper"
