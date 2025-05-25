@@ -2,14 +2,8 @@
 
 ---
 
-<div x-data="{ showmenu: false }" class="text-hvidgul-50 bg-transparent-brun">
+<div x-data="{ showmenu: false }" class=" fixed top-0 w-full z-50 text-hvidgul-50 bg-transparent-brun">
   <div class="mx-xs flex flex-row items-center justify-between space-y-xs m-auto">
-    <!-- <div class=" flex flex-row content-baseline border-hvidgul-50 border-solid border-b w-6xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                     <path d="M15.1269 13.2813H14.2235L13.9033 12.9725C15.0628 11.6278 15.7 9.911 15.6986 8.13546C15.6986 6.66538 15.2627 5.22833 14.446 4.00601C13.6293 2.78368 12.4684 1.831 11.1102 1.26843C9.75207 0.705857 8.25758 0.558663 6.81576 0.84546C5.37393 1.13226 4.04953 1.84016 3.01003 2.87966C1.97053 3.91916 1.26263 5.24356 0.975831 6.68539C0.689034 8.12721 0.836228 9.6217 1.3988 10.9799C1.96137 12.338 2.91406 13.4989 4.13638 14.3156C5.3587 15.1323 6.79576 15.5683 8.26583 15.5683C10.1069 15.5683 11.7993 14.8936 13.1029 13.773L13.4116 14.0931V14.9965L19.1292 20.7026L20.833 18.9988L15.1269 13.2813ZM8.26583 13.2813C5.41849 13.2813 3.12003 10.9828 3.12003 8.13546C3.12003 5.28812 5.41849 2.98966 8.26583 2.98966C11.1132 2.98966 13.4116 5.28812 13.4116 8.13546C13.4116 10.9828 11.1132 13.2813 8.26583 13.2813Z" fill="#FFFDFA"/>
-                    </svg>        
-                    <hp class="italic text-hvidgul-50 ml-xxs font-light">Søg</hp>
-               </div> -->
 
     <form action="/søg" method="GET" class="w-6xl hidden md:block">
       <div class="flex flex-row items-center border-hvidgul-50 border-solid border-b">
@@ -21,7 +15,8 @@
         <input type="text" name="q" placeholder="Søg" class="ml-xxs bg-transparent border-none outline-none italic text-hvidgul-50 font-light placeholder-hvidgul-50 w-full focus:outline-none focus:ring-0" />
       </div>
     </form>
-    <button id="burgermenu" class="top-s left-s md:hidden z-50 w-m h-h" x-on:click="showmenu = !showmenu">
+
+    <button id="burgermenu" class="top-s left-s md:hidden z-50 w-m " x-on:click="showmenu = !showmenu">
       <svg x-show="!showmenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#FFFDFA" class="w-8 h-8 transition-transform duration-300 ease-in-out">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M3 12h18m-18 6h18"></path>
       </svg>
@@ -29,17 +24,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
-    <nav id="mobilmenu" class="flex flex-col content-center relative" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-      <!-- <div class="fill-red-700 absolute -top-36 md:-right-4 w-screen h-40 -right-3 -z-10 transition">
-                </div> -->
-
-      <ul class="bg-hvidgul-500 gap-s flex flex-col text-red-600">
-        <li class="text-center"><a href="/ompakken" class="transition"><h6>Om pakken</h6></a></li>
-        <li class="text-center"><a href="/omos" class="transition"><h6>Om os</h6></a></li>
-        <li class="text-center"><a href="/kontakt" class="transition"><h6>Kontakt</h6></a></li>
-        <li class="text-center"><a href="/faq" class="transition"><h6>FAQ</h6></a></li>
-      </ul>
-    </nav>
+  
 
     <div class="w-[100px] md:w-auto pb-xs md:ml-xs">
       <a href="/">
@@ -151,4 +136,245 @@
       </div>
     </div>
   </div>
+  <nav id="mobilmenu" class="md:hidden fixed flex flex-col content-center relative w-screen top-0 z-50" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="bg-hvidgul-500 gap-s flex flex-col py-sm  text-brun-600 shadow-lg">
+      
+      <li class="relative group">
+       <div class="flex flex-row justify-between items-center mr-s">
+          <a href="#" class="hover:underline "><h6 class="pl-sm">Barnedåb</h6></a>
+          <svg
+          class="w-sm h-4 ml-xs transition-transform duration-300 ease-in-out group-open:rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+       </div>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <div class="flex flex-row justify-between items-center mr-s">
+          <a href="#" class="hover:underline "><h6 class="pl-sm">Konfirmation</h6></a>
+          <svg
+          class="w-sm h-4 ml-xs transition-transform duration-300 ease-in-out group-open:rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+       </div>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <div class="flex flex-row justify-between items-center mr-s">
+          <a href="#" class="hover:underline "><h6 class="pl-sm">Bryllup</h6></a>
+          <svg
+          class="w-sm h-4 ml-xs transition-transform duration-300 ease-in-out group-open:rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+       </div>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <div class="flex flex-row justify-between items-center mr-s">
+          <a href="#" class="hover:underline "><h6 class="pl-sm">Fester</h6></a>
+          <svg
+          class="w-sm h-4 ml-xs transition-transform duration-300 ease-in-out group-open:rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+       </div>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="relative group">
+        <div class="flex flex-row justify-between items-center mr-s ">
+          <a href="#" class="hover:underline "><h6 class="pl-sm">Fødselsdag</h6></a>
+          <svg
+          class="w-sm h-4 ml-xs transition-transform duration-300 ease-in-out group-open:rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+       </div>
+        <!-- Dropdown -->
+        <div class="absolute  w-screen  hidden group-hover:flex flex-col  gap-sm px-sm py-lg bg-hvidgul-500 shadow-lg z-50">
+          <!-- Før festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Før festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Invitationer</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tilbehør</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Tillægskort</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Formatsammensætning</a></li>
+            </ul>
+          </div>
+  
+          <!-- Under festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Under festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Skilte</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Til bordet</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Gæstebog</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Salmehæfter</a></li>
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Klistermærker</a></li>
+            </ul>
+          </div>
+  
+          <!-- Efter festen -->
+          <div>
+            <h6 class="italic mb-2 text-lg">Efter festen</h6>
+            <ul class="space-y-1 not-italic text-black">
+              <li><a href="#" class="hover:italic transition ease-in 0.3s">Takkekort</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="/faq"><h6 class="pl-sm">FAQ</h6></a></li>
+    </ul>
+  </nav>
 </div>
