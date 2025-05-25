@@ -34,74 +34,82 @@ import FakeNav from "../components/FakeNav.astro";
   <Typewrite />
   <div class="flex flex-row justify-center items-center mx-sm md:mx-ml mt-ml md:mt-2xl ">
     <div class="w-7xl shadow-card transition-transform  duration-300 ease-in hover:-rotate-6  hover:scale-110 hover:z-50">   
-      <Image src={invi1} class="drop-shadow-xl" alt="Invitation 1"/>
+     <a href="/produktliste"> <Image src={invi1} class="drop-shadow-xl" alt="Invitation 1"/></a>
     </div>
     <div class="w-7xl  shadow-card origin-center -rotate-12 transition-transform  duration-300 ease-in hover:-rotate-6  hover:scale-110 hover:z-50">
-      <Image src={invi2} class="drop-shadow-xl" alt="Invitation 2"/>
+      <a href="/produktliste"><Image src={invi2} class="drop-shadow-xl" alt="Invitation 2"/></a>
     </div>
     <div class="w-7xl shadow-card  z-10  transition-transform scale-105 duration-300 ease-in hover:-rotate-3 hover:scale-125 "> 
-      <Image src={invi3} class="drop-shadow-xl" alt="Invitation 3"/>
+      <a href="/produktliste"><Image src={invi3} class="drop-shadow-xl" alt="Invitation 3"/></a>
     </div>
     <div class="w-7xl shadow-card  origin-center rotate-12 transition-transform  duration-300 ease-in hover:-rotate-6 hover:scale-110 hover:z-50"> 
-      <Image src={invi4} class="drop-shadow-xl" alt="Invitation 4"/>
+      <a href="/produktliste"><Image src={invi4} class="drop-shadow-xl" alt="Invitation 4"/></a>
     </div>
     <div class="w-7xl shadow-card transition-transform  duration-300 ease-in hover:rotate-6 hover:scale-110 hover:z-60"> 
-      <Image src={invi5} class="drop-shadow-xl" alt="Invitation 5"/>
+      <a href="/produktliste"><Image src={invi5} class="drop-shadow-xl" alt="Invitation 5"/></a>
     </div>
   </div>
 </section>
 
  
  <!-- De 4 cards -->
-  <div class="grid grid-cols-1  sm:px-2xl px-s gap-s lg:grid-cols-4 my-3xl ">
+<div class="grid grid-cols-1  sm:px-2xl px-s gap-s lg:grid-cols-4 my-3xl ">
   <!-- Bryllup -->
   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-  <Image 
-    src={bryllup} 
-    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
-    alt="Bryllup" 
-  />
-  <div class="relative z-10 flex items-center justify-center h-full">
-    <h6 class="text-hvidgul-50 text-4xl"><i>Bryllup</i></h6>
+<a href="/produktliste">
+    <Image 
+      src={bryllup} 
+      class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+      alt="Bryllup" 
+    />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Bryllup</i></h6>
+    </div>
+</a>
   </div>
-</div>
 
 
   <!-- Konfirmation -->
    <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-  <Image 
-    src={konfirmation} 
-    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
-    alt="Bryllup" 
-  />
-  <div class="relative z-10 flex items-center justify-center h-full">
-    <h6 class="text-hvidgul-50 text-4xl"><i>Konfirmation</i></h6>
-  </div>
+<a href="/produktliste">
+    <Image 
+      src={konfirmation} 
+      class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+      alt="Bryllup" 
+    />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Konfirmation</i></h6>
+    </div>
+</a>
 </div>
 
   <!-- Barnedåb -->
    <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-  <Image 
-    src={barnedaab} 
-    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
-    alt="Bryllup" 
-  />
-  <div class="relative z-10 flex items-center justify-center h-full">
-    <h6 class="text-hvidgul-50 text-4xl"><i>Barnedåb</i></h6>
-  </div>
+<a href="/produktliste">
+    <Image 
+      src={barnedaab} 
+      class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+      alt="Bryllup" 
+    />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Barnedåb</i></h6>
+    </div>
+</a>
 </div>
 
   <!-- Fødselsdag -->
   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-  <Image 
-    src={fodselsdag} 
-    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
-    alt="Bryllup" 
-  />
-  <div class="relative z-10 flex items-center justify-center h-full">
-    <h6 class="text-hvidgul-50 text-4xl"><i>Fødselsdag</i></h6>
+<a href="/produktliste">
+    <Image 
+      src={fodselsdag} 
+      class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+      alt="Bryllup" 
+    />
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h6 class="text-hvidgul-50 text-4xl"><i>Fødselsdag</i></h6>
+    </div>
   </div>
-</div>
+</a>
 </div>
 
   <Trestep />
@@ -310,7 +318,7 @@ import FakeNav from "../components/FakeNav.astro";
 
   
 </MainLayout>
-<a href="/produktliste">link</a>
+
 
 <!-- <style>
 .pulse {
