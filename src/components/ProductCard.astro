@@ -3,7 +3,7 @@ const { product } = Astro.props;
 import Heart from "./Heart.astro";
 ---
 
-<article class="w-[180px] md:w-[300px] mb-xs">
+<article class="w-[185px] md:w-[300px] mb-xs">
     <a href={`/produkt/${product.slug}`}>
         <div class="w-[180px] md:w-[300px] overflow-hidden">
             <img src={`/images/${product.image_filename}`} alt={product.name} class="object-cover transition-all ease-in hover:scale-110" />
