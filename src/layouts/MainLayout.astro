@@ -5,6 +5,7 @@ import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
 import FakeNav from "../components/FakeNav.astro";
+import BackToTop from "../components/BackToTop.astro";
 
 ---
 
@@ -52,6 +53,7 @@ import FakeNav from "../components/FakeNav.astro";
 
     <main>
       <slot />
+      <BackToTop />
     </main>
 
     <footer>
