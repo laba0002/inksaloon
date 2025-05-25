@@ -1,11 +1,13 @@
 ---
-//ts-nocheck
+// @ts-nocheck
 import ListeLayout from "../layouts/ListeLayout.astro";
 import { apiDetails } from "../settings";
 import { Image } from "astro:assets";
 import ProductCard from "../components/ProductCard.astro"; 
 import FakeNav from "../components/FakeNav.astro";
-import brylluphero from "../assets/images/bryllup_hero.jpg";
+import Accordion from "../components/Accordion.astro";
+import Button from "../components/Button.astro";
+
 
 const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
   headers: {
@@ -14,38 +16,130 @@ const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, 
   },
 });
 const data = await res.json();
-console.log("Supabase URL:", apiDetails.supabaseUrl);
-console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
 
+const styles = [...new Set(data.map(item => item.style).filter(Boolean))].map(style => ({ style }));
+const colors = [...new Set(data.map(item => item.color).filter(Boolean))].map(color => ({ color }));
+const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(season => ({ season }));
 ---
 
 <ListeLayout title="Bryllup">
   <div class="stickynav"> <FakeNav /></div>
-   <div class="relative h-[380px] overflow-hidden">
-  <Image 
-    src={brylluphero} 
-    class="absolute inset-0 w-full h-full object-cover brightness-50" 
-    alt="Bryllup" 
-  />
-  
-  <div class="relative z-10 flex items-center  h-full">
-    <h1 class="text-hvidgul-50 m-s mx-ml md:mx-xl">Bryllup</h1>
-  </div>
-</div>
+  <section x-data="{ showmenu: false }">
+    <h1 class="text-brun-600 m-s mx-ml md:mx-xl">Bryllup</h1>
+    
+    <!-- Filterknap -->
+    <div id="filterknap" class="top-s pl-sm md:pl-xl z-50 w-m" x-on:click="showmenu = true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="34" viewBox="0 0 36 34" fill="none">
+        <path d="M34.9167 17.1095H12.2658M4.27067 17.1095H1M4.27067 17.1095C4.27067 16.0495 4.69174 15.0329 5.44126 14.2834C6.19078 13.5339 7.20735 13.1128 8.26733 13.1128C9.32732 13.1128 10.3439 13.5339 11.0934 14.2834C11.8429 15.0329 12.264 16.0495 12.264 17.1095C12.264 18.1695 11.8429 19.186 11.0934 19.9356C10.3439 20.6851 9.32732 21.1062 8.26733 21.1062C7.20735 21.1062 6.19078 20.6851 5.44126 19.9356C4.69174 19.186 4.27067 18.1695 4.27067 17.1095ZM34.9167 29.2223H24.3787M24.3787 29.2223C24.3787 30.2826 23.9566 31.3003 23.2069 32.05C22.4572 32.7997 21.4404 33.2208 20.3802 33.2208C19.3202 33.2208 18.3036 32.7979 17.5541 32.0484C16.8046 31.2989 16.3835 30.2823 16.3835 29.2223M24.3787 29.2223C24.3787 28.1621 23.9566 27.1462 23.2069 26.3965C22.4572 25.6468 21.4404 25.2257 20.3802 25.2257C19.3202 25.2257 18.3036 25.6467 17.5541 26.3963C16.8046 27.1458 16.3835 28.1624 16.3835 29.2223M16.3835 29.2223H1M34.9167 4.99667H29.2242M21.229 4.99667H1M21.229 4.99667C21.229 3.93668 21.6501 2.92012 22.3996 2.1706C23.1491 1.42108 24.1657 1 25.2257 1C25.7505 1 26.2702 1.10338 26.7551 1.30423C27.24 1.50508 27.6806 1.79947 28.0517 2.1706C28.4229 2.54172 28.7173 2.98231 28.9181 3.46721C29.119 3.95211 29.2223 4.47182 29.2223 4.99667C29.2223 5.52152 29.119 6.04123 28.9181 6.52612C28.7173 7.01102 28.4229 7.45161 28.0517 7.82274C27.6806 8.19386 27.24 8.48825 26.7551 8.68911C26.2702 8.88996 25.7505 8.99333 25.2257 8.99333C24.1657 8.99333 23.1491 8.57226 22.3996 7.82274C21.6501 7.07322 21.229 6.05665 21.229 4.99667Z" stroke="#171312" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+      </svg>
+    </div>
 
+    <!-- Slide-in filtermenu -->
+    <div
+    id="filtermenu"
+    class="fixed inset-x-0 z-50 flex justify-end bg-black/50"
+    style="top: 0px; height: calc(100vh - 60px);"
+    x-show="showmenu"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    x-on:click.self="showmenu = false"
+  >
+      <div 
+        class=" w-screen md:w-9xl  h-full top-none bg-hvidgul-500 p-s shadow-lg overflow-y-auto overflow-x-scroll"
+        x-transition:enter="transition ease-out duration-300 transform"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-200 transform"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+      >
+        <button 
+          class="text-brun-600 font-bold text-lg mb-4"
+          x-on:click="showmenu = false"
+        >
+         <h6> ✕ </h6>
+        </button>
 
+        <Accordion title="Stiltype">
+          {styles.map((item) => (
+            <label class="block py-1 capitalize" key={item.style}>
+              <input type="checkbox" name="style" value={item.style} class=" appearance-none mr-2 border-none ring-none bg-brun-200 hover:bg-brun-100 focus:bg-brun-200 focus:ring-transparent checked:bg-brun-200" />
+              {item.style}
+            </label>
+          ))}
+        </Accordion>
+        
+        <Accordion title="Farver">
+          {colors.map((item) => (
+            <label class="block py-1 capitalize" key={item.color}>
+              <input type="checkbox" name="color" value={item.color} class=" appearance-none mr-2 border-none ring-none bg-brun-200 hover:bg-brun-100 focus:bg-brun-200 focus:ring-transparent checked:bg-brun-200" />
+              {item.color}
+            </label>
+          ))}
+        </Accordion>
+        
+        <Accordion title="Sæson">
+          {seasons.map((item) => (
+            <label class="block py-1 capitalize" key={item.season}>
+              <input type="checkbox" name="season" value={item.season} class=" appearance-none mr-2 border-none ring-none bg-brun-200 hover:bg-brun-100 focus:bg-brun-200 focus:ring-transparent checked:bg-brun-200" />
+              {item.season}
+            </label>
+          ))}
+        </Accordion>
+        
+       <div class=" flex flex-row gap-s">
+          <Button type="secondary" size="large">Ryd alle</Button>
+          <Button type="primary" size="large" id="filter-button" >
+            Vis resultater
+          </Button>
+       </div>
+      </div>
+    </div>
 
-
-<div class="flex flex-wrap md:gap-s md:m-xl justify-evenly"> 
-  {data.map((product) => <ProductCard {product} /> )}
-</div>
+    <!-- Produktliste -->
+    <div class="flex flex-wrap gap-xxs md:gap-s m-xs md:m-xl justify-normal" id="product-list">
+      {data.map((product) => (
+        <div
+          class="product-wrapper"
+          data-style={product.style}
+          data-color={product.color}
+          data-season={product.season}
+        >
+          <ProductCard product={product} />
+        </div>
+      ))}
+    </div>
+  </section>
 </ListeLayout>
 
 <style>
-
   .stickynav {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 40;
   }
 </style>
+
+<script type="module">
+  const filterButton = document.getElementById("filter-button");
+
+  filterButton.addEventListener("click", () => {
+    const selectedStyles = [...document.querySelectorAll('input[name="style"]:checked')].map(cb => cb.value);
+    const selectedColors = [...document.querySelectorAll('input[name="color"]:checked')].map(cb => cb.value);
+    const selectedSeasons = [...document.querySelectorAll('input[name="season"]:checked')].map(cb => cb.value);
+
+    const wrappers = document.querySelectorAll(".product-wrapper");
+
+    wrappers.forEach(wrapper => {
+      const matchesStyle = selectedStyles.length === 0 || selectedStyles.includes(wrapper.dataset.style);
+      const matchesColor = selectedColors.length === 0 || selectedColors.includes(wrapper.dataset.color);
+      const matchesSeason = selectedSeasons.length === 0 || selectedSeasons.includes(wrapper.dataset.season);
+
+      wrapper.style.display = (matchesStyle && matchesColor && matchesSeason) ? "" : "none";
+    });
+  });
+</script>
