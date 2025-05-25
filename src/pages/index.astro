@@ -26,14 +26,11 @@ import altilbordet from "../assets/images/altilbordet.jpg";
 import boheme from "../assets/images/bohemepic.jpg";
 import vandmaling from "../assets/images/vandmaling.jpg";
 import FakeNav from "../components/FakeNav.astro";
-import Karrusellen from "../components/Karrusellen.astro";
 ---
 
 <MainLayout title="Forside">
   <div class="stickynav"> <FakeNav /></div>
 
-
-  <!---------------- TYPEWRITER & DE 5 INVITATIONER ---------------->
 <section class="sm:my-xl my-m">
   <Typewrite />
   <div class="flex flex-row justify-center items-center mx-sm md:mx-ml mt-ml md:mt-2xl ">
@@ -56,7 +53,7 @@ import Karrusellen from "../components/Karrusellen.astro";
 </section>
 
  
- <!---------------- DE 4 CARDS ---------------->
+ <!-- De 4 cards -->
   <div class="grid grid-cols-1  sm:px-2xl px-s gap-s lg:grid-cols-4 my-3xl ">
   <!-- Bryllup -->
   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
@@ -109,188 +106,9 @@ import Karrusellen from "../components/Karrusellen.astro";
 </div>
 
   <Trestep />
-<!---------------- DEN FLOTTEKARRUSEL ---------------->
-<div class="carousel w-full overflow-x-auto snap-x snap-mandatory flex scroll-smooth">
-  <!-- Slide 1 -->
-  <div id="slide1" class="carousel-item relative w-full flex-shrink-0 snap-center">
-<div class="my-xl">
-  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
-    <Image
-      src={format}
-      alt="baggrund"
-      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
-    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
-      <div class="flex-1 px-0 md:pl-xl px-ml">
-        <h4 class=" text-hvidgul-50">
-          Format<i>sammensætning</i>
-        </h4>
-        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
-          Gør dine invitationer unikke med kreative formatsammensætninger. Udover det klassiske kort kan du vælge mellem rulleinvitationer, fold-ud designs, lommekort eller udstansede former. 
-          <br><br> 
-          Kombiner det med specielle kuverter, laksegl eller bånd for et ekstra personligt præg. Formen på invitationen er med til at skabe forventning – allerede inden den åbnes.
-        </p>
-     <div class="hidden md:block mt-xl">
-          <Button  variant="tertiary" size="medium" href="/produktliste" >
-            Læs mere
-        </Button>
-     </div>
-     <div class="block md:hidden mt-lg">
-          <Button  variant="tertiary" size="small" href="/produktliste" >
-            Læs mere
-      </Button>
-     </div>
-      </div>
-      <div class="hidden md:block w-[450px] h-[450px] flex-shrink-0 overflow-hidden rounded-md mr-xl">
-        <Image
-          src={format}
-          alt="Invitation 2"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
-      <a href="#slide4" class="btn btn-circle text-hvidgul-50">❮</a>
-      <a href="#slide2" class="btn btn-circle text-hvidgul-50">❯</a>
-    </div>
-  </div>
-
-  <!-- Slide 2 -->
-  <div id="slide2" class="carousel-item relative w-full flex-shrink-0 snap-center">
-<div class="my-xl px-4 md:px-0">
-  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
-    <Image
-      src={altilbordet}
-      alt="baggrund"
-      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
-    <div class="absolute inset-0 bg-opacity-40 z-10"></div>
-    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
-      <div class="flex-1 px-0 md:pl-xl px-ml ">
-        <h4 class=" text-hvidgul-50">
-          Alt <i>til bordet</i>
-        </h4>
-        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
-          Skab en smuk og sammenhængende borddækning med alt det, der fuldender festen. Vi designer bordkort, menukort, velkomstskilte, bordoversigter, bordnumre, gæstebøger og klistermærker, der matcher jeres stil og tema. <br><br> Detaljerne gør forskellen – og binder hele udtrykket elegant sammen.
-        </p>
-     <div class="hidden md:block mt-xl">
-          <Button  variant="tertiary" size="medium" href="/produktliste" >
-            Læs mere
-        </Button>
-     </div>
-     <div class="block md:hidden mt-lg">
-          <Button  variant="tertiary" size="small" href="/produktliste" >
-            Læs mere
-      </Button>
-     </div>
-      </div>
-      <div class="hidden md:block w-[450px] h-[450px] flex-shrink-0 overflow-hidden rounded-md mr-xl">
-        <Image
-          src={altilbordet}
-          alt="Invitation 2"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
-      <a href="#slide1" class="btn btn-circle text-hvidgul-50">❮</a>
-      <a href="#slide3" class="btn btn-circle text-hvidgul-50">❯</a>
-    </div>
-  </div>
-
-  <!-- Slide 3 -->
-  <div id="slide3" class="carousel-item relative w-full flex-shrink-0 snap-center">
-<div class="my-xl px-4 md:px-0">
-  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
-    <Image
-      src={boheme}
-      alt="baggrund"
-      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
-    <div class="absolute inset-0 bg-opacity-40 z-10"></div>
-    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
-      <div class="flex-1 px-0 md:pl-xl px-ml ">
-        <h4 class=" text-hvidgul-50">
-          <i>Boheme</i>
-        </h4>
-        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
-          Er du til det naturlige og frie boheme-look med varme farver, blomster og organiske former? Eller drømmer du om noget minimalistisk, romantisk, klassisk eller moderne? <br><br> Vi designer i mange stilarter og hjælper dig med at finde det udtryk, der passer perfekt til netop jeres dag.
-        </p>
-     <div class="hidden md:block mt-xl">
-          <Button  variant="tertiary" size="medium" href="/produktliste" >
-            Læs mere
-        </Button>
-     </div>
-     <div class="block md:hidden mt-lg">
-          <Button  variant="tertiary" size="small" href="/produktliste" >
-            Læs mere
-      </Button>
-     </div>
-      </div>
-      <div class="hidden md:block w-[450px] h-[450px] flex-shrink-0 overflow-hidden rounded-md mr-xl">
-        <Image
-          src={boheme}
-          alt="Invitation 2"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</div>    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
-      <a href="#slide2" class="btn btn-circle text-hvidgul-50">❮</a>
-      <a href="#slide4" class="btn btn-circle text-hvidgul-50">❯</a>
-    </div>
-  </div>
-
-  <!-- Slide 4 -->
-  <div id="slide4" class="carousel-item relative w-full flex-shrink-0 snap-center">
-<div class="my-xl px-4 md:px-0">
-  <div class="relative w-full sm:h-[650px] h-[400px] flex items-center overflow-hidden">
-    <Image
-      src={vandmaling}
-      alt="baggrund"
-      class="absolute inset-0 w-full h-full object-cover brightness-[30%]"/>
-    <div class="absolute inset-0 bg-opacity-40 z-10"></div>
-    <div class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full">
-      <div class="flex-1 px-0 md:pl-xl px-ml ">
-        <h4 class=" text-hvidgul-50">
-          Akvarel<i>maling</i>
-        </h4>
-        <p class="text-hvidgul-50 mt-4  max-w-full md:max-w-[600px]">
-          Få dit eget venue illustreret i en smuk akvarelstil – perfekt til invitationer, skilte eller som en særlig detalje på dagen. <br><br>Vi tilbyder også andre stilarter, der matcher jeres visuelle udtryk. Et unikt design af stedet, hvor festen holdes, gør jeres tryksager både personlige og mindeværdige.
-        </p>
-     <div class="hidden md:block mt-xl">
-          <Button  variant="tertiary" size="medium" href="/produktliste" >
-            Læs mere
-        </Button>
-     </div>
-     <div class="block md:hidden mt-lg">
-          <Button  variant="tertiary" size="small" href="/produktliste" >
-            Læs mere
-      </Button>
-     </div>
-      </div>
-      <div class="hidden md:block w-[450px] h-[450px] flex-shrink-0 overflow-hidden rounded-md mr-xl">
-        <Image
-          src={vandmaling}
-          alt="Invitation 2"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</div>    
-
-    <div class="absolute left-s right-s top-1/2 flex -translate-y-1/2 transform justify-between z-50">
-      <a href="#slide3" class="btn btn-circle text-hvidgul-50">❮</a>
-      <a href="#slide1" class="btn btn-circle text-hvidgul-50">❯</a>
-    </div>
-  </div>
-</div>
-
 
   <Instagram />
-<!---------------- REVIEW CARDS ---------------->
+
 <div class="bg-[url('/bg_review.jpg')] bg-cover py-m my-xl">
   <div class="flex flex-nowrap md:flex-wrap md:justify-center gap-m overflow-x-auto snap-x snap-mandatory scroll-smooth px-4">
     <div class="snap-start shrink-0 w-80 md:w-auto pl-s">

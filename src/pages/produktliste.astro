@@ -2,8 +2,10 @@
 //ts-nocheck
 import ListeLayout from "../layouts/ListeLayout.astro";
 import { apiDetails } from "../settings";
+import { Image } from "astro:assets";
 import ProductCard from "../components/ProductCard.astro"; 
 import FakeNav from "../components/FakeNav.astro";
+import brylluphero from "../assets/images/bryllup_hero.jpg";
 
 const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
   headers: {
@@ -19,7 +21,18 @@ console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
 
 <ListeLayout title="Bryllup">
   <div class="stickynav"> <FakeNav /></div>
-<h1 class="text-brun-600 m-s mx-ml md:mx-xl">Bryllup</h1>
+   <div class="relative h-[380px] overflow-hidden">
+  <Image 
+    src={brylluphero} 
+    class="absolute inset-0 w-full h-full object-cover brightness-50" 
+    alt="Bryllup" 
+  />
+  
+  <div class="relative z-10 flex items-center  h-full">
+    <h1 class="text-hvidgul-50 m-s mx-ml md:mx-xl">Bryllup</h1>
+  </div>
+</div>
+
 
 
 
