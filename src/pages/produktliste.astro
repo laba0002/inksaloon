@@ -93,9 +93,9 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
         
        <div class=" flex flex-row gap-s">
           <Button variant="secondary" size="large">Ryd alle</Button>
-          <Button variant="primary" size="large" id="filter-button" type="button">
+          <button class="py-xxs transition bg-orange-500  text-hvidgul-100 hover:bg-orange-600 w-auto px-xs md:px-lg text-bodyMobile md:text-bodyDesk" id="filter-button" type="button">
             Vis resultater
-          </Button>
+          </button>
        </div>
       </div>
     </div>
