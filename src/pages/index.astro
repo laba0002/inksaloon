@@ -55,38 +55,55 @@ import Karrusellen from "../components/Karrusellen.astro";
 
  
  <!-- De 4 cards -->
-  <div class="grid grid-cols-1  sm:px-2xl px-s gap-s lg:grid-cols-4 my-3xl">
+  <div class="grid grid-cols-1  sm:px-2xl px-s gap-s lg:grid-cols-4 my-3xl ">
   <!-- Bryllup -->
   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-    <Image src={bryllup} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Bryllup" />
-    <div class="relative z-10 flex items-center justify-center h-full">
-      <h6 class="text-hvidgul-50 text-4xl"><i>Bryllup</i></h6>
-    </div>
+  <Image 
+    src={bryllup} 
+    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+    alt="Bryllup" 
+  />
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <h6 class="text-hvidgul-50 text-4xl"><i>Bryllup</i></h6>
   </div>
+</div>
+
 
   <!-- Konfirmation -->
-  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-    <Image src={konfirmation} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Konfirmation" />
-    <div class="relative z-10 flex items-center justify-center h-full">
-      <h6 class="text-hvidgul-50 text-4xl"><i>Konfirmation</i></h6>
-    </div>
+   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+  <Image 
+    src={konfirmation} 
+    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+    alt="Bryllup" 
+  />
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <h6 class="text-hvidgul-50 text-4xl"><i>Konfirmation</i></h6>
   </div>
+</div>
 
   <!-- Barnedåb -->
-  <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-    <Image src={barnedaab} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Barnedåb" />
-    <div class="relative z-10 flex items-center justify-center h-full">
-      <h6 class="text-hvidgul-50 text-4xl"><i>Barnedåb</i></h6>
-    </div>
+   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
+  <Image 
+    src={barnedaab} 
+    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+    alt="Bryllup" 
+  />
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <h6 class="text-hvidgul-50 text-4xl"><i>Barnedåb</i></h6>
   </div>
+</div>
 
   <!-- Fødselsdag -->
   <div class="relative group sm:h-[400px] h-[100px] overflow-hidden rounded-2xl">
-    <Image src={fodselsdag} class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-300 group-hover:brightness-150" alt="Fødselsdag" />
-    <div class="relative z-10 flex items-center justify-center h-full">
-      <h6 class="text-hvidgul-50 text-4xl"><i>Fødselsdag</i></h6>
-    </div>
+  <Image 
+    src={fodselsdag} 
+    class="absolute inset-0 w-full h-full object-cover brightness-75 transition duration-500 transform group-hover:scale-125 group-hover:brightness-150" 
+    alt="Bryllup" 
+  />
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <h6 class="text-hvidgul-50 text-4xl"><i>Fødselsdag</i></h6>
   </div>
+</div>
 </div>
 
   <Trestep />
