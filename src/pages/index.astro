@@ -95,12 +95,23 @@ import Karrusellen from "../components/Karrusellen.astro";
 
   <Instagram />
 
-  <div class="flex flex-wrap justify-center gap-m bg-[url('/bg_review.jpg')] bg-cover p-lg my-xl">
-    <Review text="“Har netop modtaget vores konfirmationsinvitationer. Smukkeste indpakning og flotteste invitationer i den lækreste kvalitet. Kan ikke vente med  at sende dem ud.”" name="Gavin J." />
-    <Review text="“Meget positivt overrasket over kvalitet og brugeroplevelse, da vi modtog vores varer. Lækker indpakning.”" name="Poul B." />
-    <Review text="“Ville god service! Vi fik lavet vores invitationer af Emilie og hendes kollega gennem mail, og invitationerne blev præcis som vi ønskede. Der var hurtig levering både da vi modtog nogle forkerte invitationer og da de sendte de rigtige!”" name="Tine H." />
-    <Review text="“Ualmindelig god, fleksibel og hurtig service. Vi har modtaget de smukkeste invitationer og den løbende dialog med rettelser og godkendelser af layoutet har været meget imødekommende og hurtig..”" name="Bjarne L." />
+<div class="bg-[url('/bg_review.jpg')] bg-cover py-m my-xl">
+  <div class="flex flex-nowrap md:flex-wrap md:justify-center gap-m overflow-x-auto snap-x snap-mandatory scroll-smooth px-4">
+    <div class="snap-start shrink-0 w-80 md:w-auto pl-s">
+      <Review text="“Har netop modtaget vores konfirmationsinvitationer. Smukkeste indpakning og flotteste invitationer i den lækreste kvalitet. Kan ikke vente med at sende dem ud.”" name="Gavin J." />
+    </div>
+    <div class="snap-start shrink-0 w-80 md:w-auto">
+      <Review text="“Meget positivt overrasket over kvalitet og brugeroplevelse, da vi modtog vores varer. Lækker indpakning.”" name="Poul B." />
+    </div>
+    <div class="snap-start shrink-0 w-80 md:w-auto">
+      <Review text="“Ville god service! Vi fik lavet vores invitationer af Emilie og hendes kollega gennem mail, og invitationerne blev præcis som vi ønskede. Der var hurtig levering både da vi modtog nogle forkerte invitationer og da de sendte de rigtige!”" name="Tine H." />
+    </div>
+    <div class="snap-start shrink-0 w-80 md:w-auto pr-s">
+      <Review text="“Ualmindelig god, fleksibel og hurtig service. Vi har modtaget de smukkeste invitationer og den løbende dialog med rettelser og godkendelser af layoutet har været meget imødekommende og hurtig.”" name="Bjarne L." />
+    </div>
   </div>
+</div>
+
 
   <Tillykke />
 
