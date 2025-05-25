@@ -15,11 +15,78 @@ const data = await res.json();
 console.log("Supabase URL:", apiDetails.supabaseUrl);
 console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
 
+const headers = {
+  apikey: apiDetails.supabaseAnonKey,
+  Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
+  Prefer: "return=representation",
+};
+
+
+
+
+// Deduplicate styles
+const styles = [...new Set(data.map(item => item.style).filter(Boolean))].map(style => ({ style }));
+
+// Deduplicate colors
+const colors = [...new Set(data.map(item => item.color).filter(Boolean))].map(color => ({ color }));
+
+// Deduplicate seasons
+const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(season => ({ season }));
+
+
 ---
 
 <ListeLayout title="Bryllup">
   <div class="stickynav"> <FakeNav /></div>
 <h1 class="text-brun-600 m-s mx-ml md:mx-xl">Bryllup</h1>
+
+<details>
+  <summary class="cursor-pointer font-semibold">Stiltype</summary>
+  {styles?.length > 0 ? (
+    styles
+      .filter(item => item.style) // Filter out null or undefined
+      .map((item) => (
+        <label>
+          <input type="checkbox" name="style" value={item.style} />
+          {item.style}
+        </label>
+      ))
+  ) : (
+    <p>No styles available</p>
+  )}
+</details>
+
+<details>
+  <summary class="cursor-pointer font-semibold">Farver</summary>
+  {colors?.length > 0 ? (
+    colors
+      .filter(item => item.color)
+      .map((item) => (
+        <label>
+          <input type="checkbox" name="color" value={item.color} />
+          {item.color}
+        </label>
+      ))
+  ) : (
+    <p>No colors available</p>
+  )}
+</details>
+
+<details>
+  <summary class="cursor-pointer font-semibold">Sæson</summary>
+  {seasons?.length > 0 ? (
+    seasons
+      .filter(item => item.season)
+      .map((item) => (
+        <label>
+          <input type="checkbox" name="season" value={item.season} />
+          {item.season}
+        </label>
+      ))
+  ) : (
+    <p>No seasons available</p>
+  )}
+</details>
 
 
 
