@@ -42,35 +42,37 @@ const { myProduct } = Astro.props;
     <h6>Format: 120 x 170 mm</h6>
     <h6>Fra 30 DKK/stk</h6>
   </div>
-  <div class="flex flex-row justify-between mr-sm md:mr-xl  my-sm">
-    <Button  variant="primary" size="large" href="#" >
-      <i>Personliggør</i> din invitation
-  </Button>
-                <form>
-  <label>
-    <select name="size" class="w-[220px]">
-      <option>15 stk. (35 kr./stk.) 525 kr</option>
-      <option>20 kort (35 kr./stk.) 700 kr</option>
-      <option>25 kort (30 kr./stk.) 750 kr</option>
-      <option>30 kort (30 kr./stk.) 900 kr</option>
-      <option>35 stk. (30 kr./stk.) 1050 kr</option>
-      <option>40 kort (30 kr./stk.) 1200 kr</option>
-      <option>45 kort (30 kr./stk.) 1350 kr</option>
-      <option>50 kort (30 kr./stk.) 1500 kr</option>
-      <option>55 stk. (30 kr./stk.) 1650 kr</option>
-      <option>60 kort (30 kr./stk.) 1800 kr</option>
-      <option>65 kort (30 kr./stk.) 1950 kr</option>
-      <option>70 kort (30 kr./stk.) 2100 kr</option>
-      <option>75 stk. (30 kr./stk.) 2250 kr</option>
-      <option>80 kort (30 kr./stk.) 2400 kr</option>
-      <option>85 kort (30 kr./stk.) 2550 kr</option>
-      <option>90 kort (30 kr./stk.) 2700 kr</option>
-      <option>95 kort (30 kr./stk.) 2850 kr</option>
-      <option>100 kort (30 kr./stk.) 3000 kr</option>
-    </select>
-  </label>
-</form>
+ 
+<div class="grid grid-cols-1 sm:grid-cols-2 py-s sm:py-m gap-m mr-sm md:mr-xl">
+      <Button  variant="primary" size="singleview" href="#" >
+        <i>Personliggør</i> din invitation
+    </Button>
+                  <form>
+    <label>
+      <select name="size" class="w-full sm:max-w-[540px] ">
+        <option>15 stk. (35 kr./stk.) 525 kr</option>
+        <option>20 kort (35 kr./stk.) 700 kr</option>
+        <option>25 kort (30 kr./stk.) 750 kr</option>
+        <option>30 kort (30 kr./stk.) 900 kr</option>
+        <option>35 stk. (30 kr./stk.) 1050 kr</option>
+        <option>40 kort (30 kr./stk.) 1200 kr</option>
+        <option>45 kort (30 kr./stk.) 1350 kr</option>
+        <option>50 kort (30 kr./stk.) 1500 kr</option>
+        <option>55 stk. (30 kr./stk.) 1650 kr</option>
+        <option>60 kort (30 kr./stk.) 1800 kr</option>
+        <option>65 kort (30 kr./stk.) 1950 kr</option>
+        <option>70 kort (30 kr./stk.) 2100 kr</option>
+        <option>75 stk. (30 kr./stk.) 2250 kr</option>
+        <option>80 kort (30 kr./stk.) 2400 kr</option>
+        <option>85 kort (30 kr./stk.) 2550 kr</option>
+        <option>90 kort (30 kr./stk.) 2700 kr</option>
+        <option>95 kort (30 kr./stk.) 2850 kr</option>
+        <option>100 kort (30 kr./stk.) 3000 kr</option>
+      </select>
+    </label>
+  </form>
 </div>
+
 
 
 <div class=" mr-sm md:mr-xl">
