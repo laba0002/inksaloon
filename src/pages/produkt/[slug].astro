@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 const { myProduct } = Astro.props;
 ---
 
-<ListeLayout> 
+<ListeLayout title={myProduct.name} description={myProduct.description}> 
   <div class="stickynav"> <FakeNav /></div>
 
   <div class="flex flex-row justify-start items-center gap-xxs mx-s md:mx-xl mt-ml mb-xxs md:mb-s ">

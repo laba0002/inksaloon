@@ -22,7 +22,7 @@ const colors = [...new Set(data.map(item => item.color).filter(Boolean))].map(co
 const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(season => ({ season }));
 ---
 
-<ListeLayout title="Bryllup">
+<ListeLayout title="Produktliste" description="Find din perfekte invitation til brylluppet. Vælg mellem forskellige stilarter, farver og sæsoner.">
   <div class="stickynav"> <FakeNav /></div>
   <section x-data="{ showmenu: false }">
     <h1 class="text-brun-600  mx-sm md:mx-xl">Bryllup</h1>
