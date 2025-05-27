@@ -7,6 +7,7 @@ import { apiDetails } from "../../settings";
 import Accordion from "../../components/Accordion.astro";
 import Button from "../../components/Button.astro";
 import Heart from "../../components/Heart.astro";
+import ProductCard from "../../components/ProductCard.astro";
 export async function getStaticPaths() {
   const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/produkter?select=*`, {
     headers: {
@@ -14,17 +15,37 @@ export async function getStaticPaths() {
       Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
     },
   });
+
   const data = await res.json();
 
-  return data.map((product) => {
-    return {
-      params: { slug: product.slug },
-      props: { myProduct: product },
-    };
-  });
+  const paths = await Promise.all(
+    data.map(async (product) => {
+      const relatedRes = await fetch(
+        `${apiDetails.supabaseUrl}/rest/v1/produkter?select=*&style=eq.${product.style}&slug=neq.${product.slug}&limit=4`,
+        {
+          headers: {
+            apikey: apiDetails.supabaseAnonKey,
+            Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
+          },
+        }
+      );
+      const related = await relatedRes.json();
+
+      return {
+        params: { slug: product.slug },
+        props: {
+          myProduct: product,
+          relatedProducts: related,
+        },
+      };
+    })
+  );
+
+  return paths;
 }
 
-const { myProduct } = Astro.props;
+
+const { myProduct, relatedProducts } = Astro.props;
 ---
 
 <ListeLayout title={myProduct.name} description={myProduct.description}> 
@@ -121,9 +142,18 @@ const { myProduct } = Astro.props;
     </Accordion>
 </div>
  </div>
-
-<!-- indsæt knapper & accordion -->
 </section>
+
+{relatedProducts.length > 0 && (
+  <section class="mx-s md:mx-xl my-xl">
+    <h3 class="text-brun-700 text-lg mb-m">Relaterede produkter i samme stil</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-m">
+      {relatedProducts.map(product => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  </section>
+)}
 
 
 <div class="trestep"><Trestep /></div>
