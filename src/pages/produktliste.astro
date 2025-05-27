@@ -101,7 +101,7 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
     </div>
 
     <!-- Produktliste -->
-    <div class="flex flex-wrap gap-xxs md:gap-s m-xs md:m-xl justify-evenly md:justify-normal" id="product-list">
+    <div class="flex flex-wrap gap-xxs md:gap-s m-xs md:m-xl justify-evenly md:justify-normal produkter" id="product-list">
       {data.map((product) => (
         <div
           class="product-wrapper"
@@ -143,3 +143,16 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
     });
   });
 </script>
+
+<script>  
+	import { inView } from "motion";
+
+const inviewelement = document.querySelector(".produkter");
+inView(
+	inviewelement , () => {
+		inviewelement.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+	})
+
+	
+
+  </script>

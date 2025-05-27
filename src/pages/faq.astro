@@ -18,7 +18,7 @@ import weight2 from "../assets/images/weight2.jpg";
 <FaqLayout title="FAQ" description="Ofte stillede spørgsmål">
     <div class="stickynav"> <FakeNav /></div>
     
-<section  class="w-9xl md:w-[800px] mx-auto my-xl">
+<section  class="w-9xl md:w-[800px] mx-auto my-xl accordion">
     <h1 class="" id="anker">FAQ</h1>
     <Accordion title="Hvordan gør man?" >
         <h6> Step 1: Vælg design</h6>
@@ -252,7 +252,7 @@ import weight2 from "../assets/images/weight2.jpg";
 
 </section>
 
-<section>
+<section class="bento">
     <div class="grid sm:grid-cols-6 sm:grid-rows-3 gap-xxs sm:px-2xl sm:my-xl
     grid-cols-2 px-s">
         
@@ -316,3 +316,21 @@ import weight2 from "../assets/images/weight2.jpg";
       z-index: 100;
     }
   </style>
+
+<script>  
+	import { inView } from "motion";
+
+const inviewelement = document.querySelector(".accordion");
+inView(
+	inviewelement , () => {
+		inviewelement.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+	})
+
+	const inviewelement1 = document.querySelector(".bento");
+inView(
+	inviewelement1 , () => {
+		inviewelement1.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+	})
+	
+
+  </script>

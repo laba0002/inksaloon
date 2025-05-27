@@ -38,7 +38,7 @@ const { myProduct } = Astro.props;
   </div>
 
 <section class="grid grid-cols-1 md:grid-cols-2 content-around gap-sm mx-s md:mx-xl mt-ml">
-    <img class=" w-9xl md:w-[550px] h-auto" src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
+    <img class=" w-9xl md:w-[550px] h-auto " src={`/images/${myProduct.image_filename}`} alt={myProduct.name} />
  <div>   
 <div class="flex flex-row justify-between items-center mr-sm md:mr-xl mb-s">  
   <h4 class="text-brun-700"> {myProduct.name}</h4>
@@ -126,7 +126,7 @@ const { myProduct } = Astro.props;
 </section>
 
 
-<Trestep />
+<div class="trestep"><Trestep /></div>
 </ListeLayout>
 
 
@@ -138,3 +138,16 @@ const { myProduct } = Astro.props;
     z-index: 100;
   }
 </style>
+
+<script>  
+	import { inView } from "motion";
+
+const inviewelement = document.querySelector(".trestep");
+inView(
+	inviewelement , () => {
+		inviewelement.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+	})
+
+	
+
+  </script>
