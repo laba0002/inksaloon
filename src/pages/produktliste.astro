@@ -37,8 +37,8 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
     <!-- Slide-in filtermenu -->
     <div
     id="filtermenu"
-    class="fixed inset-x-0 z-50 flex justify-end bg-black/50"
-    style="top: 0px; height: calc(100vh - 60px);"
+    class="fixed w-screen h-screen  z-50 bg-black/50"
+    style="top: 0px; height: calc(100vhpx);"
     x-show="showmenu"
     x-transition:enter="transition ease-out duration-300"
     x-transition:enter-start="opacity-0"
@@ -49,7 +49,7 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
     x-on:click.self="showmenu = false"
   >
       <div 
-        class=" w-screen md:w-9xl  h-full top-none bg-hvidgul-500 p-s shadow-lg overflow-y-auto overflow-x-scroll"
+        class=" w-screen md:w-9xl  h-full top-none bg-hvidgul-500 p-s drop-shadow-lg overflow-y-auto overflow-x-scroll"
         x-transition:enter="transition ease-out duration-300 transform"
         x-transition:enter-start="translate-x-full"
         x-transition:enter-end="translate-x-0"
@@ -58,7 +58,7 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
         x-transition:leave-end="translate-x-full"
       >
         <button 
-          class="text-brun-600 font-bold text-lg mb-4"
+          class="text-brun-600 font-bold text-lg mb-"
           x-on:click="showmenu = false"
         >
          <h6> ✕ </h6>
@@ -91,7 +91,7 @@ const seasons = [...new Set(data.map(item => item.season).filter(Boolean))].map(
           ))}
         </Accordion>
         
-       <div class=" flex flex-row gap-s">
+       <div class=" flex flex-row gap-s mt-3xl justify-between ">
           <Button variant="secondary" size="large">Ryd alle</Button>
           <button class="py-xxs transition bg-orange-500  text-hvidgul-100 hover:bg-orange-600 w-auto px-xs md:px-lg text-bodyMobile md:text-bodyDesk" id="filter-button" type="button">
             Vis resultater
